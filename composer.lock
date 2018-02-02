@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "72edca3dbbd9551c8091cac1c41d61f4",
+    "content-hash": "1d74bb1c2a8aed4c19c2266ad9130b64",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2165,6 +2165,74 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/entity_browser",
                 "issues": "http://drupal.org/project/issues/entity_browser",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/forward",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/forward",
+                "reference": "8.x-2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/forward-8.x-2.0.zip",
+                "reference": "8.x-2.0",
+                "shasum": "2ef68e41bf2b67efe3ad68b4f7c23bca54527dbd"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/node": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0",
+                    "datestamp": "1499215743",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "John Oltman",
+                    "homepage": "https://www.drupal.org/u/john.oltman",
+                    "email": "developer@sitebasin.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "chx",
+                    "homepage": "https://www.drupal.org/user/9446"
+                },
+                {
+                    "name": "john.oltman",
+                    "homepage": "https://www.drupal.org/user/699926"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
+                },
+                {
+                    "name": "seanr",
+                    "homepage": "https://www.drupal.org/user/7074"
+                }
+            ],
+            "description": "Forward pages and other site elements to a friend.",
+            "homepage": "http://drupal.org/project/forward",
+            "support": {
+                "source": "http://cgit.drupalcode.org/forward",
+                "issues": "http://drupal.org/project/forward",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },

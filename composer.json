@@ -25,6 +25,7 @@
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.4",
         "drupal/ctools": "^3.0",
+        "drupal/forward": "^2.0",
         "drupal/inline_entity_form": "^1.0@beta",
         "drupal/media_entity_browser": "~2.0-alpha1",
         "drupal/sitemap": "^1.3",
