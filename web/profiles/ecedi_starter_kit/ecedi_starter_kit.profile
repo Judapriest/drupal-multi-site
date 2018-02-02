@@ -2,7 +2,5 @@
 
 /**
  * @file
- * Enables modules and site configuration for the Ecedi Starter Kit profile.
+ * Enables modules and site configuration for a standard site installation.
  */
-
-// Add any custom code here like hook implementations.

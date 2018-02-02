@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Install, update and uninstall hooks for the Ecedi Starter Kit install profile.
+ * Install, update and uninstall functions for the ecedi standard installation profile.
  */
 
 /**

@@ -1,3 +1,2 @@
-admin: 'adminimal_theme'
-# TODO replace the default theme by the futur starter kit theme.
-default: stark
+admin: adminimal_theme
+default: bartik
