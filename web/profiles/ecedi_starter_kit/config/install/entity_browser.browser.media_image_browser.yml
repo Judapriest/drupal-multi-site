@@ -1,0 +1,48 @@
+uuid: c4f3c545-5170-45f4-8fc4-de1710d790a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_entity_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: media_image_browser
+label: 'Media Image Browser'
+display: modal
+display_configuration:
+  width: '1070'
+  height: '680'
+  link_text: 'Select images'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration:
+  entity_type: media
+  display: rendered_entity
+  display_settings:
+    view_mode: default
+  select_text: 'Use selected images'
+  selection_hidden: false
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  899d218e-8d54-4845-9ebf-f0ef734f8089:
+    settings:
+      entity_type: media
+      bundle: image
+      form_mode: default
+      submit_text: 'Save image'
+    uuid: 899d218e-8d54-4845-9ebf-f0ef734f8089
+    weight: 1
+    label: 'Upload new image'
+    id: entity_form
+  10f07679-b56b-41b5-b11c-383d91e7ede4:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_1
+      submit_text: 'Select images'
+      auto_select: false
+    uuid: 10f07679-b56b-41b5-b11c-383d91e7ede4
+    weight: 2
+    label: Gallery
+    id: view

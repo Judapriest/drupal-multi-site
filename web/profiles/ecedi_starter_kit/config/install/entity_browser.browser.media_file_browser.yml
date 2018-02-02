@@ -1,0 +1,48 @@
+uuid: 61519015-0885-4fc1-855e-d1d03da981e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_entity_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: media_file_browser
+label: 'Media File Browser'
+display: modal
+display_configuration:
+  width: '1070'
+  height: '680'
+  link_text: 'Select files'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration:
+  entity_type: media
+  display: rendered_entity
+  display_settings:
+    view_mode: default
+  select_text: 'Use selected files'
+  selection_hidden: false
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  13a4324e-dd00-4f47-bc62-dc27b172eafd:
+    settings:
+      entity_type: media
+      bundle: file
+      form_mode: default
+      submit_text: 'Save file'
+    uuid: 13a4324e-dd00-4f47-bc62-dc27b172eafd
+    weight: 1
+    label: 'Upload new file'
+    id: entity_form
+  76f8658c-e858-4537-8203-482172cd2549:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_1
+      submit_text: 'Select files'
+      auto_select: false
+    uuid: 76f8658c-e858-4537-8203-482172cd2549
+    weight: 2
+    label: Library
+    id: view
