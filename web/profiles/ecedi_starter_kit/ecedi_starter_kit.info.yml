@@ -1,0 +1,17 @@
+name: Ecedi Starter Kit
+type: profile
+description: 'Basic installation'
+core: 8.x
+
+dependencies:
+  - 'ctools'
+  - 'inline_entity_form'
+  - 'media_entity_browser'
+  - 'entity_browser_entity_form'
+  - 'sitemap'
+  - 'admin_toolbar'
+  - 'adminimal_admin_toolbar'
+
+# TODO add base theme for the starter kit theme
+themes:
+  - 'adminimal_theme'
