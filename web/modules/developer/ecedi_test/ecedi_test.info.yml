@@ -1,0 +1,6 @@
+name: 'ecedi_test'
+type: module
+description: 'Custom module for test purpose only'
+core: 8.x
+package: 'Ecedi'
+hidden: TRUE
