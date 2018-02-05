@@ -31,3 +31,20 @@ https://gitlab.ecedi.fr/ecedi/front-end/tools/gulp-stack
 Follow the drupal8-sk branch of the repository.
 
 To update this submodule: `git submodule update --remote gulp`
+
+## Theme
+
+### Ecedi - Starter kit base theme
+
+Extend the classy theme (core theme).
+
+Provide non project specific alter and template.
+
+Override templates:
+
+* `form--input.html.twig` => Use a button tag instead of a input tag for submit buttons.
+* `form-element.html.twig` => Wrap the form element description with a P tag instead of a DIV tag.
+
+### Customer - Project specific theme
+
+Extend the ecedi theme.
