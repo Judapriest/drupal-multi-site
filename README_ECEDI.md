@@ -19,10 +19,12 @@
 2. `drush en -y <contrib_module>`
     * OU `docker-compose exec -u www-data php drush en -y <contrib_module>`.
 
-## Git sub-modules
+## Git submodules
 
 ### Gulp
 
+https://gitlab.ecedi.fr/ecedi/front-end/tools/gulp-stack
 
+Follow the drupal8-sk branch of the repository.
 
-
+To update this submodule: `git submodule update --remote gulp`

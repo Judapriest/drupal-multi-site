@@ -1,0 +1,4 @@
+[submodule "gulp"]
+	path = gulp
+	url = git@gitlab.ecedi.fr:ecedi/front-end/tools/gulp-stack.git
+	branch = drupal8-sk
