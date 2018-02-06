@@ -1,0 +1,155 @@
+////
+/// @file
+/// Define all mixins.
+////
+
+/// Media query definition.
+/// @param {string} $screen - The breakpoint name. Must be a key of the $breakpoints map.
+/// @example
+///   .foo {
+///     @include respondTo('small') {
+///       color: #424242;
+///     }
+///   }
+@mixin respondTo($screen) {
+
+  $media: mediaMapJoin(map-get($breakpoints, $screen));
+
+  @if $media {
+    @media screen and #{$media} {
+      @content;
+    }
+  }
+  @else {
+    @error 'No "" breakpoint found in $breakpoint';
+  }
+
+}
+
+/// Display a background in full page.
+/// @param {cssValue} $bg - The background property value.
+/// @example
+///    .content {
+///      @include backgroundFullPage(#ffffff url('path/to/my/awesome/bg/image.png') no-repeat right top);
+///    }
+@mixin backgroundFullPage($bg) {
+  position: relative;
+
+  &:before {
+    width: 300%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    right: -100%;
+    content: '';
+    background: $bg;
+    z-index: -1;
+  }
+}
+
+/// Display icon using the before|after pseudo element.
+/// @param {string} $icon - The icon content code (eg. from icomoon).
+/// @param {length | percentage} $delta - Apply a delta, in px, to the icon position (margin-right|margin-left).
+/// @param {length | percentage} $size - The icon size in rem|em|px|etc...
+/// @param {string} $pseudoElement - The pseudo element to apply the icon (before|after).
+/// @example
+///    .submit-button {
+///      @include icon($submi-icon);
+///      // OR with custom content.
+///      @include icon($submit-icon) {
+///        // add some specific CSS properties.
+///      }
+///    }
+@mixin icon($icon, $size: 2.2rem, $pseudoElement: before) {
+
+  &::#{$pseudoElement} {
+    display: inline-block;
+    content: '#{$icon}';
+    font-family: 'icomoon';
+    font-size: $size;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    @content;
+  }
+
+}
+
+/// Helper mixin to use @font-face.
+/// TODO document this mixin.
+@mixin fontFace($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: "?#iefix",
+    svg: "#" + strReplace($name, " ", "_")
+  );
+
+  $formats: (
+    eot: "embedded-opentype",
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    src: $src , $src;
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+// ---------------------------------
+// ------------ Buttons ------------
+// ---------------------------------
+@mixin btnDefault($bg: $c-primary, $color: white) {
+  display: inline-block;
+  position: relative;
+  padding: 12px 10px;
+  background-color: $bg;
+  color: $color;
+  font-size: 1.3rem;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  transition: 0.2s;
+  box-sizing: border-box;
+
+  &:hover {
+    box-shadow: inset 0 0 15px 2px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+  }
+}
+
+
+// ---------------------------------
+// ------------- Lists -------------
+// ---------------------------------
+@mixin bulletedList($color, $size: 6) {
+  &:before {
+    width: #{$size}px;
+    height: #{$size}px;
+    margin-right: 6px;
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    content: '';
+    border-radius: 50%;
+    background: $color;
+  }
+}

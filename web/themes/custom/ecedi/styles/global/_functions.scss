@@ -1,0 +1,44 @@
+////
+/// @file
+/// Helper functions.
+////
+
+/// Usage : Transform breakpoints array into media querie
+/// @param {Array} $map
+/// @return {String} $output
+/// @example
+//    $map : (
+///     min-width: #{$screen-xsmall} + 1px,
+///     max-width: #{$screen-small},
+///   )
+@function mediaMapJoin($map) {
+  $output: '';
+  $last: length($map);
+  $index: 1;
+
+  @each $key, $value in $map {
+    $output: $output + '(#{$key}: #{$value})';
+    @if $last != $index {
+      $output: $output + ' and ';
+    }
+    $index: $index + 1;
+  }
+
+  @return $output;
+}
+
+
+/// Usage : Replace `$search` with `$replace` in `$string`
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function strReplace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + strReplace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}

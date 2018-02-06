@@ -1,0 +1,60 @@
+////
+/// @file
+/// Global variables.
+////
+
+/// Default site max width
+$site-max-width: 1140px !default;
+/// Default background max width
+$bg-max-width:   1440px !default;
+/// Default large screen size.
+$screen-large:  1280px !default;
+/// Default medium screen size.
+$screen-medium: 1024px !default;
+/// Default small screen size.
+$screen-small:   767px !default;
+/// Default xsmall screen size.
+$screen-xsmall:  480px !default;
+
+/// A map of media query expressions keyed by their breakpoint name.
+/// @see respondTo
+$breakpoints: (
+
+  'xs': (
+    max-width: #{$screen-xsmall},
+  ),
+  'small': (
+    max-width: #{$screen-small},
+  ),
+  'medium': (
+    max-width: #{$screen-medium},
+  ),
+
+  'xs to small': (
+    min-width: #{$screen-xsmall} + 1px,
+    max-width: #{$screen-small},
+  ),
+  'small to medium': (
+    min-width: #{$screen-small} + 1px,
+    max-width: #{$screen-medium},
+  ),
+  'medium to large': (
+    min-width: #{$screen-medium} + 1px,
+    max-width: #{$screen-large},
+  ),
+
+  'xs up': (
+    min-width: #{$screen-xsmall} + 1px,
+  ),
+  'small up': (
+    min-width: #{$screen-small} + 1px,
+  ),
+
+  'large': (
+    min-width: #{$screen-medium} + 1px,
+  ),
+  'xl': (
+    min-width: #{$screen-large} + 1px,
+  ),
+
+) !default;
