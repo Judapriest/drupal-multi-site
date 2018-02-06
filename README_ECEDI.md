@@ -18,9 +18,9 @@
 ## Contrib module installation
 
 1. `composer require drupal/<contrib_module>`
-    * OU `docker-compose exec -u www-data php composer require drupal/<contrib_module>`.
+    * OR `docker-compose exec -u www-data php composer require drupal/<contrib_module>`.
 2. `drush en -y <contrib_module>`
-    * OU `docker-compose exec -u www-data php drush en -y <contrib_module>`.
+    * OR `docker-compose exec -u www-data php drush en -y <contrib_module>`.
 
 ## Git submodules
 
@@ -48,3 +48,9 @@ Override templates:
 ### Customer - Project specific theme
 
 Extend the ecedi theme.
+
+#### Branch component-based-theme
+
+Use the components libraries module to allow developers to create twig components.
+The gulp stack take into account of the component file architecture.
+You must need to import your component SCSS files into the styles.scss main file.
