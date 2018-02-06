@@ -23,3 +23,7 @@
 
 # Ignore docker file
 /.env
+
+# Ecedi themes
+/web/themes/custom/ecedi/css/styles.css
+/web/themes/custom/customer/css/styles.css
