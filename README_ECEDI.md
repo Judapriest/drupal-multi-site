@@ -37,7 +37,7 @@ https://gitlab.ecedi.fr/ecedi/front-end/tools/gulp-stack
 
 Follows the drupal8-sk branch of the repository.
 
-To update this submodule: `git submodule update --remote gulp`
+To update this submodule: `git submodule update --remote --merge gulp`
 
 ## Theme
 
