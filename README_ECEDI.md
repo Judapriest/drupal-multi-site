@@ -16,6 +16,7 @@
         * `<user>` & `<password>` are for the database connection
         * if you're on a server (like DUNCAN), `<database_uri>` is `localhost`
         * `<admin_name>` & `<admin_password>` are for creating an admin account for Drupal
+        * Make sure to use **drush 9** or use the drush binary file in the `./bin` directory.
     4. Synchronize the database of the reference instance of your project if needed.
     5. If you're on a server (like DUNCAN), create the vhost, **pointing on the /web directory**, ex : `sudo bash /home/users/a2create_vhost -s drupal8sk-mah.grenoble70.ecedi.loc -d /home/users/mah/drupal8sk-mah.grenoble70.ecedi.loc/web -v 7.0 -u mah`
 
@@ -26,6 +27,7 @@
     * OR `docker-compose exec -u www-data php composer require drupal/<contrib_module>`.
 2. `drush en -y <contrib_module>`
     * OR `docker-compose exec -u www-data php drush en -y <contrib_module>`.
+    * Make sure to use **drush 9** or use the drush binary file in the `./bin` directory.
 
 ## Git submodules
 
