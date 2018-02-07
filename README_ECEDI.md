@@ -12,7 +12,7 @@
     2. `composer install`
         * OR `docker-compose exec -u www-data php composer install`
     3. `drush si ecedi_starter_kit --db-url='mysql://<user>:<password>@<database_uri>/<database_name>' --site-name=STARTERKIT --account-name=<admin_name> --account-pass=<admin_password>`
-        * OR if you're on a server (like DUNCAN), use `bin/drush` instead of `drush`
+        * OR if you're on a server (like DUNCAN), create your database first, & use `bin/drush` instead of `drush`
         * `<user>` & `<password>` are for the database connection
         * if you're on a server (like DUNCAN), `<database_uri>` is `localhost`
         * `<admin_name>` & `<admin_password>` are for creating an admin account for Drupal
