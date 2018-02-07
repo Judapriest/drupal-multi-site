@@ -112,9 +112,7 @@
   }
 }
 
-// ---------------------------------
-// ------------ Buttons ------------
-// ---------------------------------
+/// TODO possible rewrite of this mixin.
 @mixin btnDefault($bg: $c-primary, $color: white) {
   display: inline-block;
   position: relative;
@@ -136,10 +134,7 @@
   }
 }
 
-
-// ---------------------------------
-// ------------- Lists -------------
-// ---------------------------------
+/// TODO possible rewrite of this mixin.
 @mixin bulletedList($color, $size: 6) {
   &:before {
     width: #{$size}px;
