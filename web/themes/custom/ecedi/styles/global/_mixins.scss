@@ -35,7 +35,7 @@
 @mixin backgroundFullPage($bg) {
   position: relative;
 
-  &:before {
+  &::before {
     width: 300%;
     height: 100%;
     position: absolute;
@@ -136,7 +136,7 @@
 
 /// TODO possible rewrite of this mixin.
 @mixin bulletedList($color, $size: 6) {
-  &:before {
+  &::before {
     width: #{$size}px;
     height: #{$size}px;
     margin-right: 6px;
