@@ -11,8 +11,9 @@
         * `--recursive` take into account the submodules. Equivalent to `git submodule init && git submodule update`.
     2. `composer install`
         * OR `docker-compose exec -u www-data php composer install`
+    3. If you're on a server (like DUNCAN), create your database first.
     3. `drush si ecedi_starter_kit --db-url='mysql://<user>:<password>@<database_uri>/<database_name>' --site-name=STARTERKIT --account-name=<admin_name> --account-pass=<admin_password>`
-        * OR if you're on a server (like DUNCAN), create your database first, & use `bin/drush` instead of `drush`
+        * Make sure to use **drush 9** or use the drush binary file in the `./bin` directory (example: `bin/drush si ...`).
         * `<user>` & `<password>` are for the database connection
         * if you're on a server (like DUNCAN), `<database_uri>` is `localhost`
         * `<admin_name>` & `<admin_password>` are for creating an admin account for Drupal
@@ -26,6 +27,7 @@
     * OR `docker-compose exec -u www-data php composer require drupal/<contrib_module>`.
 2. `drush en -y <contrib_module>`
     * OR `docker-compose exec -u www-data php drush en -y <contrib_module>`.
+    * Make sure to use **drush 9** or use the drush binary file in the `./bin` directory.
 
 ## Git submodules
 
