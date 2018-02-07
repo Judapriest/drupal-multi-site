@@ -21,7 +21,7 @@
     }
   }
   @else {
-    @error 'No "" breakpoint found in $breakpoint';
+    @error 'No "#{$screen}" breakpoint found in $breakpoint';
   }
 
 }
@@ -55,7 +55,7 @@
 /// @param {string} $pseudoElement - The pseudo element to apply the icon (before|after).
 /// @example
 ///    .submit-button {
-///      @include icon($submi-icon);
+///      @include icon($submit-icon);
 ///      // OR with custom content.
 ///      @include icon($submit-icon) {
 ///        // add some specific CSS properties.
