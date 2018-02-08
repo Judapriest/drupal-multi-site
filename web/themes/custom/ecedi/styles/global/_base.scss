@@ -1,0 +1,13 @@
+////
+/// @file
+/// Customer theme base styles.
+////
+
+html {
+  font-size: 0.625em;
+}
+
+body {
+  font-family: $ff-default;
+  font-size: $fs-txt;
+}
