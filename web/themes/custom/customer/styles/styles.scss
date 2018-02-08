@@ -4,7 +4,9 @@
 ////
 
 @import 'global/variables/global';
+@import 'global/variables/colors';
 // Import your variables before the ecedi import statements to override the default variables values.
 @import '../../ecedi/styles/global/variables/global';
+@import '../../ecedi/styles/global/variables/colors';
 @import '../../ecedi/styles/global/functions';
 @import '../../ecedi/styles/global/mixins';

@@ -1,0 +1,15 @@
+////
+/// @file
+/// Customer theme color variables.
+////
+
+/// Overrides and/or completes the ecedi color definitions.
+$grey-dark: #444;
+
+$c-green: #008000;
+$c-purple-light: rgb(153, 128, 192);
+
+/// Overrides and/or completes the ecedi default colors.
+$c-bg: $c-purple-light;
+
+$c-success: $c-green;
