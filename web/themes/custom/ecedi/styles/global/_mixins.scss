@@ -35,7 +35,7 @@
 @mixin backgroundFullPage($bg) {
   position: relative;
 
-  &:before {
+  &::before {
     width: 300%;
     height: 100%;
     position: absolute;
@@ -82,9 +82,15 @@
 
 }
 
-/// Helper mixin to use @font-face.
-/// TODO document this mixin.
-@mixin fontFace($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+/// @font-face definitions.
+/// @param {string} $name - The font-family name.
+/// @param {url} $path - The files path (without the extension).
+/// @param {string} $weight - The associated font-weight (normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900).
+/// @param {string} $style - The associated font-style (normal | italic | oblique).
+/// @param {list} $exts - The associated extensions.
+/// @example
+///    @include font-face(MyFont, "../font/my-font", bold, italic, eot woff ttf svg);
+@mixin fontFace($name, $path, $weight: normal, $style: normal, $exts: eot woff2 woff ttf svg) {
   $src: null;
 
   $extmods: (
@@ -136,7 +142,7 @@
 
 /// TODO possible rewrite of this mixin.
 @mixin bulletedList($color, $size: 6) {
-  &:before {
+  &::before {
     width: #{$size}px;
     height: #{$size}px;
     margin-right: 6px;
