@@ -5,7 +5,9 @@
 1. Requirements
     * composer:^1.6.3
     * drush:^9.0.0
-2. Installation
+2. Docker
+    * If you plan to use Docker : in the file `[docker-folder]/images/nginx/nginx-confs/apps/drupal/drupal8.conf` replace `root	/var/www/html;` by `root	/var/www/html/web;`
+3. Installation
     1. `git clone --recursive git@gitlab.ecedi.fr:drupal/d8-dev-sk.git`
         * OR change the URI to the URI of your project.
         * `--recursive` take into account the submodules. Equivalent to `git submodule init && git submodule update`.
