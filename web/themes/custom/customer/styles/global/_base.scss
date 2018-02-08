@@ -3,16 +3,5 @@
 /// Customer theme base styles.
 ////
 
-/// Import Fonts
+/// Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600');
-
-/// Base font-size for html equates to 10px : allows using rem font-sizes everywhere by dividing / 10.
-/// Ex : 2rem will equate to 20px.
-html {
-  font-size: 0.625em;
-}
-
-body {
-  font-family: $ff-default;
-  font-size: $fs-txt;
-}
