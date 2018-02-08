@@ -1,0 +1,14 @@
+uuid: 53cbc963-7a52-4ab7-a580-1a0aff508425
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media_pattern
+label: 'Media pattern'
+type: 'canonical_entities:media'
+pattern: 'medias/[media:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

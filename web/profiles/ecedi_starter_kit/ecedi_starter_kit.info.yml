@@ -47,6 +47,12 @@ dependencies:
   - admin_toolbar
   - admin_toolbar_tools
   - adminimal_admin_toolbar
+  - metatag
+  - metatag_facebook
+  - metatag_google_plus
+  - metatag_open_graph
+  - metatag_twitter_cards
+  - pathauto
 
 themes:
   - bartik
