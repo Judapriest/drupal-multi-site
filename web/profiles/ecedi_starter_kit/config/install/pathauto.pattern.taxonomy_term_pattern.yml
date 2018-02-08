@@ -1,0 +1,14 @@
+uuid: 48a872ca-85e8-432a-ab13-9d1f7e1bcf62
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term_pattern
+label: 'Taxonomy term pattern'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:vocabulary]/[term:parents]/[term:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }
