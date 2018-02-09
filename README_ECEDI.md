@@ -3,11 +3,13 @@
 ## Installation
 
 1. Requirements
-    * composer:^1.6.3
-    * drush:^9.0.0
-2. Docker
-    * If you plan to use Docker : in the file `[docker-folder]/images/nginx/nginx-confs/apps/drupal/drupal8.conf` replace `root	/var/www/html;` by `root	/var/www/html/web;`
-3. Installation
+    * composer:\^1.6.3
+    * drush:\^9.0.0
+    * Docker
+        * If you plan to use Docker : in the file `[docker-folder]/images/nginx/nginx-confs/apps/drupal/drupal8.conf` replace `root	/var/www/html;` by `root	/var/www/html/web;`
+    * Duncan
+        * If you're on a server (like DUNCAN), create the vhost, **pointing on the /web directory**, ex : `sudo bash /home/users/a2create_vhost -s drupal8sk-mah.grenoble70.ecedi.loc -d /home/users/mah/drupal8sk-mah.grenoble70.ecedi.loc/web -v 7.0 -u mah`
+2. Installation
     1. `git clone --recursive git@gitlab.ecedi.fr:drupal/d8-dev-sk.git`
         * OR change the URI to the URI of your project.
         * `--recursive` take into account the submodules. Equivalent to `git submodule init && git submodule update`.
@@ -20,7 +22,6 @@
         * if you're on a server (like DUNCAN), `<database_uri>` is `localhost`
         * `<admin_name>` & `<admin_password>` are for creating an admin account for Drupal
     4. Synchronize the database of the reference instance of your project if needed.
-    5. If you're on a server (like DUNCAN), create the vhost, **pointing on the /web directory**, ex : `sudo bash /home/users/a2create_vhost -s drupal8sk-mah.grenoble70.ecedi.loc -d /home/users/mah/drupal8sk-mah.grenoble70.ecedi.loc/web -v 7.0 -u mah`
 
 
 ## Contrib module installation
