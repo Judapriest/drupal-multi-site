@@ -54,6 +54,8 @@ dependencies:
   - metatag_twitter_cards
   - pathauto
   - seo_checklist
+  - webform
+  - webform_ui
 
 themes:
   - bartik
