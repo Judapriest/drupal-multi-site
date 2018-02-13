@@ -53,6 +53,7 @@ dependencies:
   - metatag_open_graph
   - metatag_twitter_cards
   - pathauto
+  - seo_checklist
 
 themes:
   - bartik
