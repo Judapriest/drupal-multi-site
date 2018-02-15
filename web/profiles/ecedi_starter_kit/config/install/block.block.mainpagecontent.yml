@@ -1,0 +1,20 @@
+uuid: 6aa8c4c1-20f7-4500-b15d-49fea63118e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - customer
+id: mainpagecontent
+theme: customer
+region: content
+weight: 1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: visible
+visibility: {  }
