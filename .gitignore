@@ -27,3 +27,6 @@
 # Ecedi themes
 /web/themes/custom/ecedi/css/styles.css
 /web/themes/custom/customer/css/styles.css
+
+# Ecedi Starter Kit
+composer.lock
