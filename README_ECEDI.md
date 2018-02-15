@@ -23,6 +23,10 @@
         * `<admin_name>` & `<admin_password>` are for creating an admin account for Drupal
     4. Synchronize the database of the reference instance of your project if needed.
 
+## Composer
+
+The `composer.lock` file has been deleted from the repository.
+However it is good to version it during the initialization of a project based on the starterkit.
 
 ## Contrib module installation
 
