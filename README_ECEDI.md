@@ -1,5 +1,7 @@
 # Drupal 8 Ecedi Starter Kit
 
+Initial README file from [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project)
+
 ## Installation
 
 1. Requirements
