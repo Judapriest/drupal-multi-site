@@ -1,5 +1,14 @@
+###
+## Customer libraries
+## 
+## Define libraries to load css and js assets.
+###
+
+# Global style loaded on every pages.
 global-styling:
   version: 1.x
   css:
     theme:
       css/styles.css: {}
+
+# Add other libraries below.
