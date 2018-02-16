@@ -30,9 +30,10 @@ Initial README file from [drupal-composer/drupal-project](https://github.com/dru
 Before to start the installation you may want to not enable some modules.
 
 Check the `web/profiles/ecedi_starter_kit/ecedi_starter_kit.info.yml`, you can comment the following sections (without worries)
-    * developer section
-        * /!\ enable kint AND devel (not devel only).
-    * multilingual section
+
+* developer section
+    * /!\ enable kint AND devel (not devel only).
+* multilingual section
 
 Waiting for profile inheritance (Drupal 8.6 if all goes well).
 
