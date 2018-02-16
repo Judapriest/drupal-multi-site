@@ -63,6 +63,8 @@ Override templates:
 
 Extends the ecedi theme.
 
+See `web/themes/custom/customer/README.md` file for specific info.
+
 #### Branch component-based-theme
 
 Uses the components libraries module to allow developers to create twig components.
