@@ -4,6 +4,7 @@ description: 'Install with commonly used features pre-configured.'
 version: VERSION
 core: 8.x
 dependencies:
+  # From standard profile
   - node
   - history
   - block
@@ -39,14 +40,21 @@ dependencies:
   - views_ui
   - tour
   - automated_cron
+  # Starter kit specific
+  - sitemap
   - ctools
   - inline_entity_form
+  ## Developer
+  - devel
+  - kint
+  ## Media
   - media_entity_browser
   - entity_browser_entity_form
-  - sitemap
+  ## Admin tools
   - admin_toolbar
   - admin_toolbar_tools
   - adminimal_admin_toolbar
+  ## SEO
   - metatag
   - metatag_facebook
   - metatag_google_plus
@@ -54,8 +62,14 @@ dependencies:
   - metatag_twitter_cards
   - pathauto
   - seo_checklist
+  ## Webform
   - webform
   - webform_ui
+  ## Multilingual
+#  - language
+#  - locale
+#  - content_translation
+#  - config_translation
 
 themes:
   - bartik

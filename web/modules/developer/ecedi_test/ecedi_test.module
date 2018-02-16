@@ -22,3 +22,12 @@ function ecedi_test_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+/**
+ * Implements hook_language_switch_links_alter().
+ */
+function ecedi_test_language_switch_links_alter(array &$links, $type, \Drupal\Core\Url $url) {
+  dpm($links);
+  dpm($type);
+  dpm($url);
+}
