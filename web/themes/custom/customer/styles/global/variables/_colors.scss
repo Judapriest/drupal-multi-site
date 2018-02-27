@@ -4,12 +4,14 @@
 ////
 
 /// Overrides and/or completes the ecedi color definitions.
-$grey-dark: #444;
+$c-purple-800: #370e74;
 
-$c-green: #008000;
-$c-purple-light: #9980C0;
+$c-green-600: #0a705a;
+
+$c-red-400: #C00000;
 
 /// Overrides and/or completes the ecedi default colors.
-$c-bg: $c-purple-light;
+$c-primary-A: $c-purple-800;
+$c-primary-B: $c-green-600;
 
-$c-success: $c-green;
+$c-secondary-A: $c-red-400;

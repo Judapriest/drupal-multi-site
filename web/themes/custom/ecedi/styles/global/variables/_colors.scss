@@ -4,19 +4,11 @@
 ////
 
 /// Color definitions (specific names) : you shouldn't use them directly (in case of project changes).
-$c-red: #C00000 !default;
-$c-blue: #0073C0 !default;
-$c-grey-dark: #2a2a2a !default;
-$c-grey-light: #fefefe !default;
+$c-blue-400: #0073C0 !default;
 
 $c-white: #fff !default;
 $c-black: #000 !default;
 
 /// Default colors : abstracted names to use in project.
-$c-txt: $c-grey-dark !default;
-$c-bg: $c-grey-light !default;
+$c-primary-A: $c-blue-400 !default;
 
-$c-primary: $c-blue !default;
-
-$c-error: $c-red !default;
-$c-success: $c-blue !default;
