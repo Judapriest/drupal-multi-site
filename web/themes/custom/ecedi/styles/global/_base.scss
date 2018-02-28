@@ -1,0 +1,15 @@
+////
+/// @file
+/// Customer theme base styles.
+////
+
+/// Base font-size for html equates to 10px : allows using rem font-sizes everywhere by dividing / 10.
+/// Ex : 2rem will equate to 20px.
+html {
+  font-size: 0.625em;
+}
+
+body {
+  font-family: $ff-default;
+  font-size: $fs-txt;
+}

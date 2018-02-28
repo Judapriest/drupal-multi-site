@@ -5,6 +5,8 @@ package: Ecedi
 core: 8.x
 libraries:
   - customer/global-styling
+libraries-override:
+  ecedi/global-styling: false
 
 base theme: ecedi
 
