@@ -1,14 +1,18 @@
 ////
 /// @file
-/// SASS main file.
+/// Ecedi SASS main file.
 ////
 
+/// Import variables.
 @import 'global/variables/global';
 @import 'global/variables/colors';
 @import 'global/variables/fonts';
+
+/// Import helpers.
 @import 'global/functions';
 @import 'global/mixins';
 @import 'global/extends';
 
+/// Import styles.
 @import 'global/base';
 
