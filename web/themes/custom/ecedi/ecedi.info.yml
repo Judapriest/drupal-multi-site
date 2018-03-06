@@ -6,5 +6,6 @@ core: 8.x
 hidden: TRUE
 libraries:
   - ecedi/global-styling
+  - ecedi/js-helpers
 
 base theme: classy
