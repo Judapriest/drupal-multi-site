@@ -16,7 +16,7 @@ my-library:
     - core/drupal # Load Drupal js (Drupal.behaviors, Drupal.t, Drupal.url, etc...)
     - core/jquery.once # If you plan to use jQuery.once (recommended with behaviors)
 ```
-If your js should be loaded on every pages, add it to the global-styling library.
+If your js should be loaded on every pages, add it to the global-styling library (see the demo.js example, the line is commented).
 
 After created the library, you can attach your library:
 * to a render array:

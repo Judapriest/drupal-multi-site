@@ -10,5 +10,18 @@ global-styling:
   css:
     theme:
       css/styles.css: {}
+  js:
+#    js/demo.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
 
 # Add other libraries below.
+#demo:
+#  js:
+#    js/demo.js: {}
+#  dependencies:
+#    - core/jquery
+#    - core/jquery.once
+#    - core/drupal

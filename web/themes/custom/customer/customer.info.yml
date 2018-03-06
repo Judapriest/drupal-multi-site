@@ -5,6 +5,7 @@ package: Ecedi
 core: 8.x
 libraries:
   - customer/global-styling
+#  - customer/demo
 libraries-override:
   ecedi/global-styling: false
 
