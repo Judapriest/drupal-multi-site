@@ -29,7 +29,7 @@ dependencies:
   - page_cache
   - dynamic_page_cache
   - taxonomy
-  - dblog
+  - syslog
   - search
   - shortcut
   - toolbar
