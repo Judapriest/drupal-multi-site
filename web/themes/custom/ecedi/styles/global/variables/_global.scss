@@ -57,3 +57,38 @@ $breakpoints: (
   ),
 
 ) !default;
+
+
+/// A list of all input types.
+$input-types: 'input[type="text"]',
+'input[type="email"]',
+'input[type="password"]',
+'input[type="search"]',
+'input[type="url"]',
+'input[type="tel"]',
+'input[type="number"]',
+'input[type="date"]',
+'input[type="file"]',
+'textarea',
+'select';
+
+$inputs-unquoted: ();
+
+@each $type in $input-types {
+  $inputs-unquoted: append($inputs-unquoted, unquote($type), comma);
+}
+
+$inputs: $inputs-unquoted;
+
+/// A list of all button types.
+$button-types: 'button',
+'input[type="button"]',
+'input[type="submit"]';
+
+$buttons-unquoted: ();
+
+@each $type in $button-types {
+  $buttons-unquoted: append($buttons-unquoted, unquote($type), comma);
+}
+
+$buttons: $buttons-unquoted;

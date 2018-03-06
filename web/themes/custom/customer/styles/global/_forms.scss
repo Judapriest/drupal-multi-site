@@ -1,0 +1,45 @@
+////
+/// @file
+/// Customer theme form styles.
+////
+
+/// Placeholder.
+::placeholder {
+  color: inherit;
+  opacity: .8;
+}
+
+/// Inputs.
+#{$inputs} {
+
+  &:hover,
+  &:focus {
+
+  }
+
+  &:disabled {
+
+  }
+}
+input[type="search"] {
+  appearance: none; // for Safari
+}
+textarea {
+
+}
+select {
+
+}
+
+/// Buttons.
+#{$buttons} {
+
+  &:hover,
+  &:focus {
+
+  }
+
+  &:disabled {
+
+  }
+}
