@@ -3,5 +3,8 @@
 /// Customer theme global variables.
 ////
 
-/// Override the ecedi default value for $site-max-width.
-$site-max-width: 1920px;
+/// Overrides the ecedi default sizes.
+$w-site: 1240px;
+
+/// Custom project sizes.
+$w-content: 1000px;
