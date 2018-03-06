@@ -3,9 +3,9 @@
 /// Customer theme base styles.
 ////
 
-/// Better width/padding handling thanks to box-sizing
-/// Uses inheritance so it can easily be overriden for specific components.
+/// Better width/padding handling thanks to box-sizing.
 /// @see https://css-tricks.com/international-box-sizing-awareness-day/
+/// Uses inheritance so it can easily be overridden for specific components.
 /// @see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 html {
   box-sizing: border-box;
