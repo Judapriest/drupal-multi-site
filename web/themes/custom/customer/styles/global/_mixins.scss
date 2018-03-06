@@ -1,0 +1,29 @@
+////
+/// @file
+/// Customer theme mixins.
+////
+
+/// Defines button colors, on default state & on hover/focus : you should adapt it to your needs in the project.
+/// @param {string} $bg - The background color.
+/// @param {string} $color - The text color.
+/// @param {string} $border - The border color (optional).
+/// @example
+///   .foo {
+///     @include btnColor($c-primary-A, $c-primary-B);
+///   }
+@mixin btnColor($bg: $c-primary-A, $color: $c-white, $border: null) {
+  background: $bg;
+  color: $color;
+  @if $border {
+    border-color: $border;
+  }
+
+  &:hover,
+  &:focus {
+    background: $color;
+    color: $bg;
+    @if $border {
+      border-color: $bg;
+    }
+  }
+}
