@@ -18,12 +18,16 @@ Initial README file from [drupal-composer/drupal-project](https://github.com/dru
     2. `composer install`
         * OR `docker-compose exec -u www-data php composer install`
     3. If you're on a server (like DUNCAN), create your database first.
-    4. `drush si ecedi_starter_kit --db-url='mysql://<user>:<password>@<database_uri>/<database_name>' --site-name=STARTERKIT --account-name=<admin_name> --account-pass=<admin_password>`
+    4. **Option 1** : `drush si ecedi_starter_kit --db-url='mysql://<user>:<password>@<database_uri>/<database_name>' --site-name=STARTERKIT --account-name=<admin_name> --account-pass=<admin_password>`
         * Make sure to use **drush 9** or use the drush binary file in the `./bin` directory (example: `bin/drush si ...`).
         * `<user>` & `<password>` are for the database connection
         * if you're on a server (like DUNCAN), `<database_uri>` is `localhost`
         * `<admin_name>` & `<admin_password>` are for creating an admin account for Drupal
-    4. Synchronize the database of the reference instance of your project if needed.
+    
+        **Option 2** : Using Drupal Console 
+        * `bin/drupal si ecedi_starter_kit --langcode=fr --site-mail=<site email> --account-mail=<admin email> --db-user=<database user> --db-pass=<database password> --db-name=<database name> --site-name=<site name> --account-name=<admin_name> --account-pass=<admin_password>`
+        * Replace by database identifiers and password
+    5. Synchronize the database of the reference instance of your project if needed.
 
 ## Installation profile
 
