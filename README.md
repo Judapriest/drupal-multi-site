@@ -41,6 +41,12 @@ Check the `web/profiles/ecedi_starter_kit/ecedi_starter_kit.info.yml`, you can c
 
 Waiting for profile inheritance (Drupal 8.6 if all goes well).
 
+## Update drupal
+
+To update the drupal installation after a `composer update` use the following drupal command:
+
+* `bin/drupal update:execute all`
+
 ## Composer
 
 The `composer.lock` file has been deleted from the repository.
