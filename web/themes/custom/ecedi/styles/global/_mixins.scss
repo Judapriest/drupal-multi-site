@@ -50,33 +50,23 @@
 
 /// Display icon using the before|after pseudo element.
 /// @param {string} $icon - The icon content code (eg. from icomoon).
-/// @param {length | percentage} $delta - Apply a delta, in px, to the icon position (margin-right|margin-left).
 /// @param {length | percentage} $size - The icon size in rem|em|px|etc...
-/// @param {string} $pseudoElement - The pseudo element to apply the icon (before|after).
+/// @param {string} $pseudoElement - The pseudo element to apply the icon to (before|after).
 /// @example
 ///    .submit-button {
-///      @include icon($submit-icon);
+///      @include icon($i-submit);
 ///      // OR with custom content.
-///      @include icon($submit-icon) {
+///      @include icon($i-submit) {
 ///        // add some specific CSS properties.
 ///      }
 ///    }
 @mixin icon($icon, $size: 2.2rem, $pseudoElement: before) {
 
   &::#{$pseudoElement} {
+    @extend %icon;
     display: inline-block;
     content: '#{$icon}';
-    font-family: 'icomoon';
     font-size: $size;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    speak: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    vertical-align: middle;
     @content;
   }
 

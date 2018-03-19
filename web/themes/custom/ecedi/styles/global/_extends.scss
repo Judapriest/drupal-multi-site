@@ -3,6 +3,20 @@
 /// Define all extendables.
 ////
 
+/// Base for an icon
+%icon {
+  font-family: $ff-icon;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+}
+
 /// Resets link (<a>) styles.
 %resetLink {
   display: block;
