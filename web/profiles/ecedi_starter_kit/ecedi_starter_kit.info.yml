@@ -45,6 +45,7 @@ dependencies:
   - ctools
   - inline_entity_form
   - config_split
+  - environment_indicator
   ## Developer
   - devel
   - kint
