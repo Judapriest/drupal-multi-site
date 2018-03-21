@@ -13,9 +13,10 @@ global-styling:
   js:
 #    js/demo.js: {}
   dependencies:
-    - core/jquery
-    - core/jquery.once
-    - core/drupal
+#    - core/jquery
+#    - core/jquery.once
+#    - core/drupal
+#    - ecedi/js-helpers
 
 # Add other libraries below.
 #demo:
@@ -25,3 +26,4 @@ global-styling:
 #    - core/jquery
 #    - core/jquery.once
 #    - core/drupal
+#    - ecedi/js-helpers
