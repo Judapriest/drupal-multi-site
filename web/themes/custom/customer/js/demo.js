@@ -20,8 +20,8 @@
       $('selector', context).once('once-identifier').each(function () {
         // The code here is called once.
 
-        // Example of how to use an helper function
-        // Helpers.equalHeight($('selector, other-selector', context));
+        // Example of how to use an helper function (they are defined in Ecedi theme)
+        // Helpers.demoHelper('demo');
       });
     }
   };
