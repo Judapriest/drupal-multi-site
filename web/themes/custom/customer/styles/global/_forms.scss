@@ -11,7 +11,10 @@
 
 /// Inputs.
 #{$inputs} {
+  border: 1px solid;
   border-radius: 0;
+  background: $c-white;
+  color: $c-text-A;
   &:hover,
   &:focus {
 
