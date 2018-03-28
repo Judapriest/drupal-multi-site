@@ -1,0 +1,13 @@
+////
+/// @file
+/// Customer page layout.
+////
+
+.layout-container {
+  max-width: $w-site;
+  margin: 0 auto;
+}
+.layout-content {
+  max-width: $w-content;
+  margin: 0 auto;
+}

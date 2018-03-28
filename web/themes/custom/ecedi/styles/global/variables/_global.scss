@@ -4,9 +4,9 @@
 ////
 
 /// Default site max width
-$site-max-width: 1140px !default;
-/// Default background max width
-$bg-max-width:   1440px !default;
+$w-site: 1140px !default;
+
+/// Breakpoints for media queries.
 /// Default large screen size.
 $screen-large:  1280px !default;
 /// Default medium screen size.
