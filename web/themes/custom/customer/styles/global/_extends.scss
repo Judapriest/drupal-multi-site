@@ -9,4 +9,6 @@
 
 /// Button default style.
 %btn {
+  border: none;
+  @include btnColor;
 }
