@@ -3,24 +3,31 @@
 /// Customer SASS main file.
 ////
 
-@import 'global/variables/global';
-@import 'global/variables/colors';
-@import 'global/variables/fonts';
-@import 'global/variables/icons';
-// Import your variables before the ecedi import statements to override the default variables values.
+
+/// Import Ecedi variables first.
 @import '../../ecedi/styles/global/variables/global';
 @import '../../ecedi/styles/global/variables/colors';
 @import '../../ecedi/styles/global/variables/fonts';
 
+/// Import Customer variables & overrides.
+@import 'global/variables/global';
+@import 'global/variables/colors';
+@import 'global/variables/fonts';
+@import 'global/variables/icons';
+
+/// Import Ecedi helpers (functions, mixins, extends...) first.
 @import '../../ecedi/styles/global/functions';
 @import '../../ecedi/styles/global/mixins';
 @import '../../ecedi/styles/global/extends';
 
-@import '../../ecedi/styles/global/base';
-
+/// Import Customer helpers (functions, mixins, extends...) & overrides.
 @import 'global/mixins';
 @import 'global/extends';
 
+/// Import Ecedi base styles.
+@import '../../ecedi/styles/global/base';
+
+/// Import Customer styles.
 @import 'global/base';
 
 
