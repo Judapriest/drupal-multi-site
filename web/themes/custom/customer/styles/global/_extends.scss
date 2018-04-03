@@ -9,6 +9,6 @@
 
 /// Button default style.
 %btn {
+  padding: .5em 1em;
   border: none;
-  @include btnColor;
 }
