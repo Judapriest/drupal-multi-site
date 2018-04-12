@@ -69,6 +69,8 @@ dependencies:
   ## Webform
   - webform
   - webform_ui
+  ## Others
+  - fences
   ## Multilingual
 #  - language
 #  - locale
