@@ -71,6 +71,7 @@ dependencies:
   - webform_ui
   ## Others
   - fences
+  - menu_block
   ## Multilingual
 #  - language
 #  - locale
