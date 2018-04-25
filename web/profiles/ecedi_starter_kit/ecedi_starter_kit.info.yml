@@ -64,6 +64,8 @@ dependencies:
   - metatag_twitter_cards
   - pathauto
   - seo_checklist
+  - xmlsitemap
+  - redirect
   ## Webform
   - webform
   - webform_ui
