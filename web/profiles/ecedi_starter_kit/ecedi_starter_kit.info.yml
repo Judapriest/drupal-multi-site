@@ -65,6 +65,7 @@ dependencies:
   - seo_checklist
   - xmlsitemap
   - redirect
+  - google_analytics
   ## Webform
   - webform
   - webform_ui
