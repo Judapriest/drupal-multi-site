@@ -50,10 +50,10 @@ $breakpoints: (
     min-width: #{$screen-small} + 1px,
   ),
 
-  'large up': (
+  'medium up': (
     min-width: #{$screen-medium} + 1px,
   ),
-  'xl up': (
+  'large up': (
     min-width: #{$screen-large} + 1px,
   ),
 
