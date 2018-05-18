@@ -69,6 +69,8 @@ dependencies:
   ## Webform
   - webform
   - webform_ui
+  ## RGPD
+  - eu_cookie_compliance
   ## Others
   - fences
   - menu_block

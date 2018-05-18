@@ -30,6 +30,7 @@
         "drupal/ctools": "^3.0",
         "drupal/edit_ui": "^1.0@RC",
         "drupal/environment_indicator": "^3.3",
+        "drupal/eu_cookie_compliance": "^1.0",
         "drupal/fences": "^2.0@alpha",
         "drupal/forward": "^2.0",
         "drupal/google_analytics": "^2.2",
