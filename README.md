@@ -39,10 +39,10 @@ After the installation you can configure Drupal according to your environment ne
   * As developer, you may want to disable all caches (especially for FE dev):
      1. Copy `web/sites/example.settings.local.php` to `web/sites/default/settings.local.php`
      2. In the settings.local.php:
-        * Uncomment `$settings['cache']['bins']['render'] = 'cache.backend.null';` and `$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';`
-        * Add `$settings['cache']['bins']['page'] = 'cache.backend.null';`
+         * Uncomment `$settings['cache']['bins']['render'] = 'cache.backend.null';` and `$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';`
+         * Add `$settings['cache']['bins']['page'] = 'cache.backend.null';`
      3. In the settings.php:
-        * Uncomment `if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {...}` block.
+         * Uncomment `if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {...}` block.
      4. Clear the cache `bin/drupal cr all`.
   * [See more](https://www.drupal.org/node/2598914)
 
