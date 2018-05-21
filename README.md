@@ -29,6 +29,22 @@ Initial README file from [drupal-composer/drupal-project](https://github.com/dru
         * Replace by database identifiers and password
     5. Synchronize the database of the reference instance of your project if needed.
 
+## Installation prod vs dev
+
+After the installation you can configure Drupal according to your environment needs.
+
+* Prod:
+  * Nothing to configure. The default services.yml and settings.php are ready to be used in prod.
+* Dev:
+  * As developer, you may want to disable all caches (especially for FE dev):
+     1. Copy `sites/example.settings.local.php` to `sites/default/settings.local.php`
+     2. In the settings.local.php:
+        * Uncomment `$settings['cache']['bins']['render'] = 'cache.backend.null';` and `$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';`
+        * Add `$settings['cache']['bins']['page'] = 'cache.backend.null';`
+     3. In the settings.php:
+        * Uncomment `if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {...}` block.
+  * [See more](https://www.drupal.org/node/2598914)
+
 ## Installation profile
 
 Before to start the installation you may want to not enable some modules.
