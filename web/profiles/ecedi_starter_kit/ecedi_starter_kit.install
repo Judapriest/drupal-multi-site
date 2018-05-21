@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Install, update and uninstall functions for the ecedi standard installation profile.
+ * Functions for the ecedi standard installation profile.
  */
 
 /**
@@ -18,4 +18,8 @@ function ecedi_starter_kit_install() {
   standard_install();
 
   // Add code here to make nodes, terms, etc.
+  \Drupal::service('module_installer')->install([
+    'xmlsitemap',
+    'eu_cookie_compliance',
+  ]);
 }
