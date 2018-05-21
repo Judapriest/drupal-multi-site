@@ -43,6 +43,7 @@ After the installation you can configure Drupal according to your environment ne
         * Add `$settings['cache']['bins']['page'] = 'cache.backend.null';`
      3. In the settings.php:
         * Uncomment `if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {...}` block.
+     4. Clear the cache `bin/drupal cr all`.
   * [See more](https://www.drupal.org/node/2598914)
 
 ## Installation profile
