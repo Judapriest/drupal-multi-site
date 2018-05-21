@@ -37,7 +37,7 @@ After the installation you can configure Drupal according to your environment ne
   * Nothing to configure. The default services.yml and settings.php are ready to be used in prod.
 * Dev:
   * As developer, you may want to disable all caches (especially for FE dev):
-     1. Copy `sites/example.settings.local.php` to `sites/default/settings.local.php`
+     1. Copy `web/sites/example.settings.local.php` to `web/sites/default/settings.local.php`
      2. In the settings.local.php:
         * Uncomment `$settings['cache']['bins']['render'] = 'cache.backend.null';` and `$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';`
         * Add `$settings['cache']['bins']['page'] = 'cache.backend.null';`
