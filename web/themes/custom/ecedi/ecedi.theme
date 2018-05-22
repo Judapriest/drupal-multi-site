@@ -23,7 +23,7 @@ function ecedi_preprocess_input(&$variables) {
 /**
  * Implements hook_preprocess().
  */
-function customer_preprocess(&$variables, $hook) {
+function ecedi_preprocess(&$variables, $hook) {
     try {
         $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
     }
