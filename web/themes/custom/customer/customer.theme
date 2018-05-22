@@ -143,3 +143,17 @@ function customer_theme_suggestions_details_alter(array &$suggestions, array $va
 function customer_preprocess_menu_local_task(array &$variables) {
   //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
 }
+
+/**
+ * Implements hook_preprocess().
+ */
+function customer_preprocess(&$variables, $hook) {
+    try {
+        $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+    }
+    catch (Exception $e) {
+        $variables['is_front'] = FALSE;
+    }
+    // Ensure the cache varies correctly
+    $variables['#cache']['contexts'][] = 'url.path.is_front';
+}
