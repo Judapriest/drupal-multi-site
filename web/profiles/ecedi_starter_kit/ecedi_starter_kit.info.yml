@@ -79,6 +79,10 @@ dependencies:
 #  - locale
 #  - content_translation
 #  - config_translation
+  ## Ckeditor
+  - fakeobjects
+  - ckeditor_templates
+  - ckeditor_iframe
 
 themes:
   - bartik
