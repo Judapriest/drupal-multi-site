@@ -19,3 +19,17 @@ function ecedi_preprocess_input(&$variables) {
     $variables['label'] = $variables['element']['#value'];
   }
 }
+
+/**
+ * Implements hook_preprocess().
+ */
+function ecedi_preprocess(&$variables, $hook) {
+    try {
+        $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+    }
+    catch (Exception $e) {
+        $variables['is_front'] = FALSE;
+    }
+    // Ensure the cache varies correctly
+    $variables['#cache']['contexts'][] = 'url.path.is_front';
+}
