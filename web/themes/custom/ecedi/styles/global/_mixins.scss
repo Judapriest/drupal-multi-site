@@ -11,13 +11,19 @@
 ///       color: #424242;
 ///     }
 ///   }
-@mixin respondTo($screen) {
+@mixin respondTo($screen, $additional:'') {
 
-  $media: mediaMapJoin(map-get($breakpoints, $screen));
+  $media: mediaMapJoin(map-get($breakpoints, $additional));
 
   @if $media {
-    @media screen and #{$media} {
-      @content;
+    @if $print {
+      @media screen and #{$media}, #{$additional} {
+        @content;
+      }
+    } @else {
+      @media screen and #{$media} {
+        @content;
+      }
     }
   }
   @else {
