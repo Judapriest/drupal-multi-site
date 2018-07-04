@@ -32,28 +32,6 @@
 
 }
 
-/// Display a background in full page.
-/// @param {cssValue} $bg - The background property value.
-/// @example
-///    .content {
-///      @include backgroundFullPage(#ffffff url('path/to/my/awesome/bg/image.png') no-repeat right top);
-///    }
-@mixin backgroundFullPage($bg) {
-  position: relative;
-
-  &::before {
-    width: 300%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    right: -100%;
-    content: '';
-    background: $bg;
-    z-index: -1;
-  }
-}
-
 /// Display icon using the before|after pseudo element.
 /// @param {string} $icon - The icon content code (eg. from icomoon).
 /// @param {length | percentage} $size - The icon size in rem|em|px|etc...
