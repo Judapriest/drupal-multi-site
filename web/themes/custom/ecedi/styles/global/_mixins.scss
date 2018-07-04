@@ -96,8 +96,9 @@
 /// Define bulleted list style (square or round)
 /// @param {string} $color - The bullet's color.
 /// @param {string} $size  - The bullet's size.
+/// @param {bool} $round   - The bullet's shape (square or round).
 /// @example
-///    @include bulletedList($c-primary-A, 12)
+///    @include bulletedList($c-primary-A, 12, false)
 @mixin bulletedList($color, $size: 6, $round: true) {
   &::before {
     width: #{$size}px;
