@@ -30,3 +30,7 @@
 
 # Ecedi Starter Kit
 composer.lock
+
+# Files update by core update
+/web/.ht.router.php
+/web/robots.txt
