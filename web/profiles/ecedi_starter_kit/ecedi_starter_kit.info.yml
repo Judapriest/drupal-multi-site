@@ -45,6 +45,7 @@ dependencies:
   - inline_entity_form
   - config_split
   - environment_indicator
+  - diff
   ## Developer
   - devel
   - kint
