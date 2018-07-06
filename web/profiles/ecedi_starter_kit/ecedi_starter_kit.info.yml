@@ -48,6 +48,7 @@ dependencies:
   ## Developer
   - devel
   - kint
+  - twig_tweak
   ## Media
   - media_entity_browser
   - entity_browser_entity_form
