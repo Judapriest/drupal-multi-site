@@ -69,6 +69,7 @@
     "drupal/console": "^1.0.2",
     "drupal/core": "~8.5",
     "drupal/ctools": "^3.0",
+    "drupal/diff": "^1.0@RC",
     "drupal/edit_ui": "^1.0@RC",
     "drupal/environment_indicator": "^3.3",
     "drupal/eu_cookie_compliance": "^1.0",
