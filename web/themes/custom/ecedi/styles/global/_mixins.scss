@@ -99,15 +99,20 @@
 /// @param {bool} $round   - The bullet's shape (square or round).
 /// @example
 ///    @include bulletedList($c-primary-A, 12, false)
-@mixin bulletedList($color, $size: 6, $round: true) {
+
+@mixin bulletedList($color: $c-primary-A, $size: 7px, $round: true) {
+  position: relative;
+  margin-left: calc(#{$size} * 2.5);
+
   &::before {
-    width: #{$size}px;
-    height: #{$size}px;
-    margin-right: #{$size}px;
-    display: inline-block;
+    width: #{$size};
+    height: #{$size};
+    margin-right: #{$size};
     content: '';
-    position: relative;
-    top: -1px;
+    position: absolute;
+    right: 100%;
+    top: 1em;
+    transform: translateY(-50%);
     background: $color;
 
     @if $round {
