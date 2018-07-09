@@ -99,7 +99,6 @@
 /// @param {bool} $round   - The bullet's shape (square or round).
 /// @example
 ///    @include bulletedList($c-primary-A, 12, false)
-
 @mixin bulletedList($color: $c-primary-A, $size: 7px, $round: true) {
   position: relative;
   margin-left: calc(#{$size} * 2.5);
