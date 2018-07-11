@@ -6,9 +6,13 @@
 /// Color definitions (specific names) : you shouldn't use them directly (in case of project changes).
 $c-blue-400: #0073C0 !default;
 
+$c-grey-800: #222 !default;
+
 $c-white: #fff !default;
 $c-black: #000 !default;
 
 /// Default colors : abstracted names to use in project.
 $c-primary-A: $c-blue-400 !default;
+
+$c-text-A: $c-grey-800 !default;
 
