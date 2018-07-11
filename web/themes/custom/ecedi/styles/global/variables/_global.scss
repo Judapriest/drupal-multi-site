@@ -83,7 +83,9 @@ $inputs: $inputs-unquoted;
 /// A list of all button types.
 $button-types: 'button',
 'input[type="button"]',
-'input[type="submit"]';
+'input[type="submit"]',
+'input[type="reset"]',
+'input[type="file"] > input[type="button"]';
 
 $buttons-unquoted: ();
 
