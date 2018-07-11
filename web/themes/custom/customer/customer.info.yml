@@ -8,8 +8,6 @@ libraries:
 #  - customer/demo
 libraries-override:
   ecedi/global-styling: false
-  classy/base: false
-  classy/file: false
 
 base theme: ecedi
 
