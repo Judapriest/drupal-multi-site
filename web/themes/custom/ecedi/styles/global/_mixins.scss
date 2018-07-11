@@ -16,7 +16,7 @@
   $media: media-map-join(map-get($breakpoints, $additional));
 
   @if $media {
-    @if $print {
+    @if $additional {
       @media screen and #{$media}, #{$additional} {
         @content;
       }
