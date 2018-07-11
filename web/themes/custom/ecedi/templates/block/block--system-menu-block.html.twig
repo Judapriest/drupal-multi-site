@@ -40,7 +40,7 @@
 ]
 %}
 {% set block_id = attributes.id|default(derivative_plugin_id) %}
-{% set heading_id = block_id ~ '-menu'|clean_id %}
+{% set heading_id = block_id ~ '-heading'|clean_id %}
 <nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
     {# Label. If not displayed, we still provide it for screen readers. #}
     {% if not configuration.label_display %}
