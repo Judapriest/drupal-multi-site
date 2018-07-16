@@ -32,28 +32,6 @@
 
 }
 
-/// Display a background in full page.
-/// @param {cssValue} $bg - The background property value.
-/// @example
-///    .content {
-///      @include backgroundFullPage(#ffffff url('path/to/my/awesome/bg/image.png') no-repeat right top);
-///    }
-@mixin backgroundFullPage($bg) {
-  position: relative;
-
-  &::before {
-    width: 300%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    right: -100%;
-    content: '';
-    background: $bg;
-    z-index: -1;
-  }
-}
-
 /// Display icon using the before|after pseudo element.
 /// @param {string} $icon - The icon content code (eg. from icomoon).
 /// @param {length | percentage} $size - The icon size in rem|em|px|etc...
@@ -114,17 +92,32 @@
   }
 }
 
-/// TODO possible rewrite of this mixin.
-@mixin bulletedList($color, $size: 6) {
+
+/// Define bulleted list style (square or round)
+/// @param {string} $color - The bullet's color.
+/// @param {string} $size  - The bullet's size.
+/// @param {bool} $round   - The bullet's shape (square or round).
+/// @example
+///    @include bulletedList($c-primary-A, 12, false)
+@mixin bulletedList($color: $c-primary-A, $size: 7px, $round: true) {
+  position: relative;
+  margin-left: calc(#{$size} * 2.5);
+
   &::before {
-    width: #{$size}px;
-    height: #{$size}px;
-    margin-right: 6px;
-    position: relative;
-    top: -1px;
-    display: inline-block;
+    width: #{$size};
+    height: #{$size};
+    margin-right: #{$size};
     content: '';
-    border-radius: 50%;
+    position: absolute;
+    right: 100%;
+    top: 1em;
+    transform: translateY(-50%);
     background: $color;
+
+    @if $round {
+      border-radius: 50%;
+    }
+
+    @content;
   }
 }
