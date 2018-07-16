@@ -4,10 +4,10 @@
  * @see customer/README.md
  * @see https://www.drupal.org/docs/8/api/javascript-api/javascript-api-overview
  */
+
 'use strict';
 
 (function ($, Drupal) {
-
   Drupal.behaviors.demo = {
     attach: function (context) {
       console.log('Ceci est un script de démo !');
@@ -23,7 +23,6 @@
         // Example of how to use an helper function (they are defined in Ecedi theme)
         // Helpers.demoHelper('demo');
       });
-    }
+    },
   };
-
 }(jQuery, Drupal));
