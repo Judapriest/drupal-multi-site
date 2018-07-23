@@ -107,7 +107,8 @@
     },
     "autoload": {
         "classmap": [
-            "scripts/composer/ScriptHandler.php"
+            "scripts/composer/ScriptHandler.php",
+            "scripts/composer/Ecedi.php"
         ]
     },
     "scripts": {
@@ -123,7 +124,8 @@
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ]
+        ],
+        "generate-project-readme": "DrupalProject\\composer\\Ecedi::generateProjectReadme"
     },
     "extra": {
         "installer-paths": {
