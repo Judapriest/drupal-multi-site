@@ -46,8 +46,8 @@ class Ecedi {
     $args = $event->getArguments();
     if (empty($args) || count($args) == 1) {
       $io->error("generate-project-readme require 2 arguments.");
-      $io->write("\nUsage: generate-project-readme [project name] [gitlab project path]\n");
-      $io->write("Example: generate-project-readme StarterKit drupal/d8-dev-sk");
+      $io->write("\nUsage: composer generate-project-readme [project name] [gitlab project path]\n");
+      $io->write("Example: composer generate-project-readme StarterKit drupal/d8-dev-sk");
       return;
     }
     $project_name = $args[0];
@@ -78,7 +78,7 @@ class Ecedi {
       'git_default' => 'git@gitlab.ecedi.fr',
       'gitlab_project_path' => $gitlab_project_path,
     ]));
-    $io->write("Correctly generated README file");
+    $io->write("Correctly generated README file.");
   }
 
 }
