@@ -46,6 +46,7 @@ dependencies:
   - config_split
   - environment_indicator
   - diff
+  - editor_advanced_link
   ## Developer
   - devel
   - kint
