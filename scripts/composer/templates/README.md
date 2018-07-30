@@ -8,7 +8,7 @@
     * Docker
         * If you plan to use Docker : Define `APP_TYPE=d8ecedi` in the `.env` file.
     * Duncan
-        * If you're on a server (like DUNCAN), create the vhost, **pointing on the /web directory**, ex : `sudo bash /home/users/a2create_vhost -s {{ project_dir }}-<TRIGRAM>.grenoble70.ecedi.loc -d /home/users/<TRIGRAM>/{{ project_dir }}-<TRIGRAM>.grenoble70.ecedi.loc/web -v 7.0 -u <TRIGRAM>`
+        * If you're on a server (like DUNCAN), create the vhost, **pointing on the /web directory**, ex : `sudo bash /home/users/a2create_vhost -s {{ project_dir }}-<TRIGRAM>.grenoble71.ecedi.loc -d /home/users/<TRIGRAM>/{{ project_dir }}-<TRIGRAM>.grenoble70.ecedi.loc/web -v 7.1 -u <TRIGRAM>`
 2. Installation
     1. `git clone --recursive {{ git_default }}:{{ gitlab_project_path }}.git {{ project_dir }}`
     2. `composer install`

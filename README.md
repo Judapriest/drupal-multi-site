@@ -10,7 +10,7 @@ Initial README file from [drupal-composer/drupal-project](https://github.com/dru
     * Docker
         * If you plan to use Docker you should use the `d8ecedi` application type (`APP_TYPE=d8ecedi`).
     * Duncan
-        * If you're on a server (like DUNCAN), create the vhost, **pointing on the /web directory**, ex : `sudo bash /home/users/a2create_vhost -s drupal8sk-<trigram>.grenoble70.ecedi.loc -d /home/users/<trigram>/drupal8sk-<trigram>.grenoble70.ecedi.loc/web -v 7.0 -u <trigram>`
+        * If you're on a server (like DUNCAN), create the vhost, **pointing on the /web directory**, ex : `sudo bash /home/users/a2create_vhost -s drupal8sk-<trigram>.grenoble70.ecedi.loc -d /home/users/<trigram>/drupal8sk-<trigram>.grenoble71.ecedi.loc/web -v 7.1 -u <trigram>`
 2. Installation
     1. `git clone --recursive git@gitlab.ecedi.fr:drupal/d8-dev-sk.git`
         * OR change the URI to the URI of your project.
