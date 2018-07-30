@@ -13,7 +13,7 @@
 ///   }
 @mixin respondTo($screen, $additional:'') {
 
-  $media: mediaMapJoin(map-get($breakpoints, $additional));
+  $media: media-map-join(map-get($breakpoints, $additional));
 
   @if $media {
     @if $print {
@@ -64,12 +64,12 @@
 /// @param {list} $exts - The associated extensions.
 /// @example
 ///    @include font-face(MyFont, "../font/my-font", bold, italic, eot woff ttf svg);
-@mixin fontFace($name, $path, $weight: normal, $style: normal, $exts: eot woff2 woff ttf svg) {
+@mixin font-face($name, $path, $weight: normal, $style: normal, $exts: eot woff2 woff ttf svg) {
   $src: null;
 
   $extmods: (
     eot: "?#iefix",
-    svg: "#" + strReplace($name, " ", "_")
+    svg: "#" + str-replace($name, " ", "_")
   );
 
   $formats: (
@@ -99,7 +99,7 @@
 /// @param {bool} $round   - The bullet's shape (square or round).
 /// @example
 ///    @include bulletedList($c-primary-A, 12, false)
-@mixin bulletedList($color: $c-primary-A, $size: 7px, $round: true) {
+@mixin bulleted-list($color: $c-primary-A, $size: 7px, $round: true) {
   position: relative;
   margin-left: calc(#{$size} * 2.5);
 

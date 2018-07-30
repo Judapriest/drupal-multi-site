@@ -18,14 +18,14 @@
 }
 
 /// Resets link (<a>) styles.
-%resetLink {
+%reset-link {
   display: block;
   color: inherit;
   text-decoration: none;
 }
 
 /// Resets button (<button>, <input>) styles.
-%resetBtn {
+%reset-btn {
   display: block;
   width: 100%;
   padding: 0;
@@ -39,7 +39,7 @@
 }
 
 /// Sets full width for an image.
-%fullImg {
+%full-img {
   display: block;
   width: 100%;
   height: auto;
