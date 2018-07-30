@@ -13,10 +13,10 @@
 ///   }
 @mixin respond-to($screen, $additional:'') {
 
-  $media: media-map-join(map-get($breakpoints, $additional));
+  $media: media-map-join(map-get($breakpoints, $screen));
 
   @if $media {
-    @if $additional {
+    @if $additional != '' {
       @media screen and #{$media}, #{$additional} {
         @content;
       }
