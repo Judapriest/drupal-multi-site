@@ -11,7 +11,7 @@
 ///       color: #424242;
 ///     }
 ///   }
-@mixin respondTo($screen, $additional:'') {
+@mixin respond-to($screen, $additional:'') {
 
   $media: media-map-join(map-get($breakpoints, $additional));
 
