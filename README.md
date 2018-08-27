@@ -10,7 +10,7 @@ Initial README file from [drupal-composer/drupal-project](https://github.com/dru
     * Docker
         * If you plan to use Docker you should use the `d8ecedi` application type (`APP_TYPE=d8ecedi`).
     * Duncan
-        * If you're on a server (like DUNCAN), create the vhost, **pointing on the /web directory**, ex : `sudo bash /home/users/a2create_vhost -s drupal8sk-<trigram>.grenoble70.ecedi.loc -d /home/users/<trigram>/drupal8sk-<trigram>.grenoble71.ecedi.loc/web -v 7.1 -u <trigram>`
+        * If you're on a server (like DUNCAN), create the vhost, **pointing on the /web directory**, ex : `sudo bash /home/users/a2create_vhost -s drupal8sk-<trigram>.grenoble71.ecedi.loc -d /home/users/<trigram>/drupal8sk-<trigram>.grenoble71.ecedi.loc/web -v 7.1 -u <trigram>`
 2. Installation
     1. `git clone --recursive git@gitlab.ecedi.fr:drupal/d8-dev-sk.git`
         * OR change the URI to the URI of your project.
@@ -27,6 +27,8 @@ Initial README file from [drupal-composer/drupal-project](https://github.com/dru
             * if you use docker, `<database_uri>` is `db`
             * `<admin_name>` & `<admin_password>` are for creating an admin account for Drupal. It should be replaced after the next step.
     5. Synchronize the database of the reference instance of your project if needed.
+    6. Synchronize files from the folder chewbacca "files" to its instance : `rsync -avz -e ssh ecedi@recette53:/home/www/<chewbacca url>/web/sites/default/files/ ./web/sites/default/files/`
+        *`<site_name>`: ex. mtes-cigeo.71.ecedi.fr
 
 ## Installation prod vs dev
 
@@ -37,6 +39,8 @@ After the installation you can configure Drupal according to your environment ne
 * Dev:
   * As developer, you may want to disable all caches (especially for FE dev):
      1. Copy `web/sites/example.settings.local.php` to `web/sites/default/settings.local.php`
+        (`$ cp sites/example.settings.local.php sites/default/settings.local.php`)
+        If you don't have permission to crate the file do this before : `chmod u+w web/sites/default`
      2. In the settings.local.php:
          * Uncomment `$settings['cache']['bins']['render'] = 'cache.backend.null';` and `$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';`
          * Add `$settings['cache']['bins']['page'] = 'cache.backend.null';`
