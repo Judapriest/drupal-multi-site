@@ -29,6 +29,7 @@ Initial README file from [drupal-composer/drupal-project](https://github.com/dru
     5. Synchronize the database of the reference instance of your project if needed.
     6. Synchronize files from the folder chewbacca "files" to its instance : `rsync -avz -e ssh ecedi@recette53:/home/www/<chewbacca url>/web/sites/default/files/ ./web/sites/default/files/`
         *`<site_name>`: ex. mtes-cigeo.71.ecedi.fr
+        If you don't have permission to crate the file do this before : `chmod u+w web/sites/default`
 
 ## Installation prod vs dev
 
@@ -39,8 +40,7 @@ After the installation you can configure Drupal according to your environment ne
 * Dev:
   * As developer, you may want to disable all caches (especially for FE dev):
      1. Copy `web/sites/example.settings.local.php` to `web/sites/default/settings.local.php`
-        (`$ cp sites/example.settings.local.php sites/default/settings.local.php`)
-        If you don't have permission to crate the file do this before : `chmod u+w web/sites/default`
+        (`cp sites/example.settings.local.php sites/default/settings.local.php`)
      2. In the settings.local.php:
          * Uncomment `$settings['cache']['bins']['render'] = 'cache.backend.null';` and `$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';`
          * Add `$settings['cache']['bins']['page'] = 'cache.backend.null';`
