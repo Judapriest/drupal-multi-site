@@ -11,7 +11,7 @@
 ///   .foo {
 ///     @include btnColor($c-primary-A, $c-primary-B);
 ///   }
-@mixin btnColor($bg: $c-primary-A, $color: $c-white, $border: null) {
+@mixin btn-color($bg: $c-primary-A, $color: $c-white, $border: null) {
   background: $bg;
   color: $color;
   @if $border {

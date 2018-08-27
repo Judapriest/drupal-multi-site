@@ -37,7 +37,7 @@ select {
 /// Buttons.
 #{$buttons} {
   @extend %btn;
-  @include btnColor;
+  @include btn-color;
   &:hover,
   &:focus {
 
