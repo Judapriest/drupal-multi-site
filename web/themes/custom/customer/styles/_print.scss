@@ -25,7 +25,11 @@
     font-size: 0;
   }
 
-  //.region-sidebar-second { visibility: visible; } //caché par defaut par drupal en hidden
+  /*
+//  caché par defaut par drupal en hidden
+  .region-sidebar-second {
+    visibility: visible;
+  }*/
 
  // ------------ éléments ne devant pas être à cheval sur 2 pages
   img,
@@ -50,6 +54,8 @@
   td {
     border-width: solid 1px $c-border;
 
-    &:not(:first-of-type) { border-left-color: $c-border; }
+    &:not(:first-of-type) {
+      border-left-color: $c-border;
+    }
   }
 }
