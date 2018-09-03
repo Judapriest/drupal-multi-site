@@ -95,29 +95,51 @@
 
 /// Define bulleted list style (square or round)
 /// @param {string} $color - The bullet's color.
-/// @param {string} $size  - The bullet's size.
-/// @param {bool} $round   - The bullet's shape (square or round).
+/// @param {string} $size  - The bullet's size (in px or em or other).
+/// @param {bool} $top   - The bullet's top position (depends also on the line-height).
 /// @example
-///    @include bulletedList($c-primary-A, 12, false)
-@mixin bulleted-list($color: $c-primary-A, $size: 7px, $round: true) {
-  position: relative;
-  margin-left: calc(#{$size} * 2.5);
+///    @include bulleted-list($c-primary-A, 12px, .75em)
+@mixin bulleted-list($color: currentColor, $size: 6px, $top: .6em) {
+  & > li {
+    position: relative;
+    margin-left: 2em;
 
-  &::before {
-    width: #{$size};
-    height: #{$size};
-    margin-right: #{$size};
-    content: '';
-    position: absolute;
-    right: 100%;
-    top: 1em;
-    transform: translateY(-50%);
-    background: $color;
-
-    @if $round {
+    &::before {
+      content: '';
+      position: absolute;
+      top: $top;
+      right: 100%;
+      width: $size;
+      height: $size;
+      margin-right: .5em;
       border-radius: 50%;
+      transform: translateY(-50%);
+      background: $color;
+      @content;
     }
+  }
+}
 
-    @content;
+/// Define numbered list style
+/// @param {string} $color - The number's color.
+/// @example
+///    @include numbered-list($c-primary-A)
+@mixin numbered-list($color: inherit) {
+  counter-reset: i;
+
+  & > li {
+    position: relative;
+    margin-left: 2em;
+
+    &::before {
+      content: counter(i) '.';
+      counter-increment: i;
+      position: absolute;
+      top: 0;
+      right: 100%;
+      margin-right: .25em;
+      color: $color;
+      @content;
+    }
   }
 }
