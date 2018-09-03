@@ -25,3 +25,44 @@ body {
   font-size: $fs-txt;
   -webkit-font-smoothing: antialiased; // for Mac : to handle fonts which seem too bold
 }
+
+// ---------- Texts ----------
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: $fs-h1;
+}
+
+h2 {
+  font-size: $fs-h2;
+}
+
+h3 {
+  font-size: $fs-h3;
+}
+
+h4 {
+  font-size: $fs-h4;
+}
+
+h5 {
+  font-size: $fs-h5;
+}
+
+// ---------- Lists ----------
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+
+// ---------- Images ----------
+figure {
+  margin: 0;
+}
