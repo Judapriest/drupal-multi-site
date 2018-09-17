@@ -40,7 +40,9 @@
   }
 
   // -------------------- Contenu --------------------
-  a { text-decoration: none !important;
+  a {
+    text-decoration: none !important;
+
     &:link,
     &:visited,
     &:focus,
