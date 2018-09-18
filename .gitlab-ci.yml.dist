@@ -5,12 +5,12 @@ stages:
 deploy_recette:
   stage: deploy
   script:
-    - cd /home/www/[project-name] && chmod 755 web/sites/default/
-    - cd /home/www/[project-name] && git pull
-    - cd /home/www/[project-name] && /usr/local/bin/php71 /usr/local/bin/composer install
-    - cd /home/www/[project-name]/gulp && gulp sassdev
-    - cd /home/www/[project-name] && /usr/local/bin/php71 bin/drupal updb
-    - cd /home/www/[project-name] && /usr/local/bin/php71 bin/drupal cr
+    - cd /home/www/[project-path] && chmod 755 web/sites/default/
+    - cd /home/www/[project-path] && git pull
+    - cd /home/www/[project-path] && /usr/local/bin/php71 /usr/local/bin/composer install
+    - cd /home/www/[project-path]/gulp && gulp sassdev
+    - cd /home/www/[project-path] && /usr/local/bin/php71 bin/drupal updb
+    - cd /home/www/[project-path] && /usr/local/bin/php71 bin/drupal cr
   environment:
     name: recette
     url: [url-recette]
@@ -22,7 +22,7 @@ deploy_recette:
 deploy_prod:
   stage: deploy
   script:
-    - cd /home/www/[project-name]
+    - cd /home/www/[project-path]
     - ansible-playbook -i ansistrano/inventory/hosts ansistrano/playbooks/production/deploy.yml
   environment:
     name: production
