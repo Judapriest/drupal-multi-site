@@ -1,0 +1,46 @@
+stages:
+  - deploy
+#  - quality
+
+deploy_recette:
+  stage: deploy
+  script:
+    - cd /home/www/[project-name] && chmod 755 web/sites/default/
+    - cd /home/www/[project-name] && git pull
+    - cd /home/www/[project-name] && /usr/local/bin/php71 /usr/local/bin/composer install
+    - cd /home/www/[project-name]/gulp && gulp sassdev
+    - cd /home/www/[project-name] && /usr/local/bin/php71 bin/drupal updb
+    - cd /home/www/[project-name] && /usr/local/bin/php71 bin/drupal cr
+  environment:
+    name: recette
+    url: [url-recette]
+  only:
+    - devel
+  tags:
+    - recette
+
+deploy_prod:
+  stage: deploy
+  script:
+    - cd /home/www/[project-name]
+    - ansible-playbook -i ansistrano/inventory/hosts ansistrano/playbooks/production/deploy.yml
+  environment:
+    name: production
+    url: [url-prod]
+  only:
+    - master
+  when: manual
+  tags:
+    - deploy
+
+# sonarqube_preview_job:
+#  stage: quality
+#  allow_failure: true
+#  variables:
+#    CI_DEBUG_TRACE: "true"
+#  only:
+#    - devel
+#  script:
+#    - /home/sonar-scanner/bin/sonar-scanner -Dsonar.gitlab.project_id=$CI_PROJECT_PATH -Dsonar.gitlab.commit_sha=$CI_COMMIT_SHA -Dsonar.gitlab.ref_name=$CI_COMMIT_REF_NAME
+#  tags:
+#    - sonarqube
