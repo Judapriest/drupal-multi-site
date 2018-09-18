@@ -5,12 +5,13 @@ stages:
 deploy_recette:
   stage: deploy
   script:
-    - cd /home/www/[project-path] && chmod 755 web/sites/default/
-    - cd /home/www/[project-path] && git pull
-    - cd /home/www/[project-path] && /usr/local/bin/php71 /usr/local/bin/composer install
-    - cd /home/www/[project-path]/gulp && gulp sassdev
+    - cd /home/www/[project-path]
+    - chmod 755 web/sites/default/
+    - git pull
+    - /usr/local/bin/php71 /usr/local/bin/composer install
+    - cd gulp && gulp sassdev
     - cd /home/www/[project-path] && /usr/local/bin/php71 bin/drupal updb
-    - cd /home/www/[project-path] && /usr/local/bin/php71 bin/drupal cr
+    - /usr/local/bin/php71 bin/drupal cr
   environment:
     name: recette
     url: [url-recette]
