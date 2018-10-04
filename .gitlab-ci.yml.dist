@@ -23,19 +23,19 @@ deploy_recette:
   tags:
     - recette
 
-deploy_prod:
-  stage: deploy
-  script:
-    - cd /home/www/[project-path]
-    - ansible-playbook -i ansistrano/inventory/hosts ansistrano/playbooks/production/deploy.yml
-  environment:
-    name: production
-    url: [url-prod]
-  only:
-    - master
-  when: manual
-  tags:
-    - deploy
+# deploy_prod:
+#  stage: deploy
+#  script:
+#    - cd /home/www/[project-path]
+#    - ansible-playbook -i ansistrano/inventory/hosts ansistrano/playbooks/production/deploy.yml
+#  environment:
+#    name: production
+#    url: [url-prod]
+#  only:
+#    - master
+#  when: manual
+#  tags:
+#    - deploy
 
 # sonarqube_preview_job:
 #  stage: quality

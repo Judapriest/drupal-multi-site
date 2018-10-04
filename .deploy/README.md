@@ -1,3 +1,14 @@
+# Configurations initiales
+
+Les playbooks et autres fichiers de configurations contiennent un certains nombre de _placeholders_ qui
+doivent être modifiés en fonction du projet
+
+- `[projet-ip]` : l'ip de production du projet
+- `[project-path]` : utilisé pour le nom du dump SQL et pour le dossier du site sur le serveur de prod
+- `[project-repo]` : au format`git@git.domaine.fr:chemin/du/repo.git`
+- `[ansible-user]` : utilisé dans le fichier `hosts`
+
+
 # pré-requis
 
 - Ansible version 1.9.0 minimum
