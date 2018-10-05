@@ -1,0 +1,3 @@
+[production]
+[production-ip] ansible_connection=ssh ansible_user=[ansible-user]
+

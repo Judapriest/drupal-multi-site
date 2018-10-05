@@ -1,0 +1,60 @@
+---
+- name: Delete unwanted files
+  file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+    - "{{ ansistrano_deploy_to }}/current/.env.dist"
+    - "{{ ansistrano_deploy_to }}/current/ansistrano/"
+    - "{{ ansistrano_deploy_to }}/current/sonar-project.properties"
+    - "{{ ansistrano_deploy_to }}/current/.gitlab-ci.yml"
+
+- name: Composer install
+  command: /usr/local/bin/composer install --no-dev
+  args:
+    chdir: "{{ ansistrano_deploy_to }}/current/"
+  run_once: False
+
+- name: npm install
+  command: /usr/bin/npm install
+  args:
+    chdir: "{{ ansistrano_deploy_to }}/current/gulp/"
+  run_once: True
+
+- name: Compilation gulp
+  hosts: all
+  shell: gulp sassprod
+  args:
+    chdir: "{{ ansistrano_deploy_to }}/current/gulp/"
+  run_once: False
+
+- name: Reset opcache
+  hosts: all
+  command: /home/www/[project-path]/cachetool.phar opcache:reset --fcgi=127.0.0.1:9000
+  run_once: False
+
+- name: Drupal updb
+  command: ../bin/drupal updb -y
+  args:
+    chdir: "{{ ansistrano_deploy_to }}/current/web"
+  run_once: True
+
+- name: Drupal cache purge
+  command: ../bin/drupal cr
+  args:
+    chdir: "{{ ansistrano_deploy_to }}/current/web"
+  run_once: True
+
+- name: Drupal fix folder permissions
+  hosts: all
+  command: find . -type d -exec chmod 755 {} \;
+  args:
+    chdir: "{{ ansistrano_deploy_to }}/current"
+  run_once: False
+
+- name: Drupal fix file permissions
+  hosts: all
+  command: find . -type f -exec chmod 644 {} \;
+  args:
+    chdir: "{{ ansistrano_deploy_to }}/current"
+  run_once: False

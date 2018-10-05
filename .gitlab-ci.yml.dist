@@ -8,7 +8,7 @@ deploy_recette:
     - cd /home/www/[project-path]
     - chmod 755 web/sites/default/
     - git pull
-    - /usr/local/bin/php71 /usr/local/bin/composer install
+    - /usr/local/bin/php71 /usr/local/bin/composer install --no-dev
     - cd gulp
     - npm install
     - gulp sassprod
@@ -23,21 +23,21 @@ deploy_recette:
   tags:
     - recette
 
-deploy_prod:
-  stage: deploy
-  script:
-    - cd /home/www/[project-path]
-    - ansible-playbook -i ansistrano/inventory/hosts ansistrano/playbooks/production/deploy.yml
-  environment:
-    name: production
-    url: [url-prod]
-  only:
-    - master
-  when: manual
-  tags:
-    - deploy
+# deploy_prod:
+#  stage: deploy
+#  script:
+#    - cd /home/www/[project-path]
+#    - ansible-playbook -i ansistrano/inventory/hosts ansistrano/playbooks/production/deploy.yml
+#  environment:
+#    name: production
+#    url: [url-prod]
+#  only:
+#    - master
+#  when: manual
+#  tags:
+#    - deploy
 
-# sonarqube_preview_job:
+# sonarqube_preview_job:
 #  stage: quality
 #  allow_failure: true
 #  variables:

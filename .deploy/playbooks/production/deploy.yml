@@ -1,0 +1,21 @@
+- name : Deployment for production
+  hosts: "production"
+  become: false
+  vars:
+    ansistrano_deploy_from: "{{ playbook_dir }}"
+    ansistrano_deploy_to: "/home/www/[project-path]/www/"
+    ansistrano_shared_paths: [ bin, vendor, gulp/node_modules, web/modules/contrib, web/themes/contrib, web/libraries, web/sites/default/files ]
+    ansistrano_shared_files: [ web/sites/default/settings.php ]
+    ansistrano_version_dir: "releases"
+    ansistrano_current_dir: "current"
+    ansistrano_current_via: "symlink"
+    ansistrano_keep_releases: 3
+    ansistrano_deploy_via: "git"
+    ansistrano_allow_anonymous_stats: no
+    ansistrano_git_repo: [project-repo]
+    ansistrano_git_branch: master
+    ansistrano_before_setup_tasks_file: "{{ playbook_dir }}/my-before-setup-tasks.yml"
+    ansistrano_after_symlink_tasks_file: "{{ playbook_dir }}/my-after-symlink-tasks.yml"
+  roles:
+    - carlosbuenosvinos.ansistrano-deploy
+

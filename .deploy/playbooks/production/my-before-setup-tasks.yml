@@ -1,0 +1,6 @@
+---
+- name: Dump
+  command: "{{ ansistrano_deploy_to }}current/bin/drupal dbdu --gz --file=[project-path].sql"
+  args:
+    chdir: "{{ ansistrano_deploy_to }}current/web"
+  run_once: False
