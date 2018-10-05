@@ -27,7 +27,7 @@ deploy_recette:
 #  stage: deploy
 #  script:
 #    - cd /home/www/[project-path]
-#    - ansible-playbook -i ansistrano/inventory/hosts ansistrano/playbooks/production/deploy.yml
+#    - ansible-playbook -i .deploy/inventory/hosts .deploy/playbooks/production/deploy.yml
 #  environment:
 #    name: production
 #    url: [url-prod]
