@@ -77,6 +77,7 @@
         "drupal/fakeobjects": "^1.0",
         "drupal/fences": "^2.0@alpha",
         "drupal/forward": "^2.0",
+        "drupal/gdpr": "^2.0",
         "drupal/google_analytics": "^2.2",
         "drupal/inline_entity_form": "^1.0@beta",
         "drupal/media_entity_browser": "~2.0-alpha1",
