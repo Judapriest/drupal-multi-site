@@ -9,9 +9,12 @@ $c-purple-800: #370e74;
 $c-green-600: #0a705a;
 
 $c-red-400: #C00000;
+$c-grey-400: #eee;
 
 /// Overrides and/or completes the ecedi default colors.
 $c-primary-A: $c-purple-800;
 $c-primary-B: $c-green-600;
 
 $c-secondary-A: $c-red-400;
+
+$c-border: $c-grey-400;

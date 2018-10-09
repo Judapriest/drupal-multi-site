@@ -1,0 +1,63 @@
+@media print {
+  // -------------------- elements cachés --------------------
+  #skip-link,
+  .region-navigation,
+  .layout-container > footer,
+  .breadcrumb,
+  .pager,
+  .search-form,
+  .region-sidebar-second {
+    display: none;
+  }
+
+  // -------------------- Structure --------------------
+  html,
+  body {
+    overflow: inherit;
+  }
+
+  .field-name-body::after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    font-size: 0;
+  }
+
+  /*
+//  caché par defaut par drupal en hidden
+  .region-sidebar-second {
+    visibility: visible;
+  }*/
+
+ // ------------ éléments ne devant pas être à cheval sur 2 pages
+  img,
+  tr,
+  .item-list,
+  .teaser {
+    page-break-inside: avoid;
+  }
+
+  // -------------------- Contenu --------------------
+  a {
+    text-decoration: none !important;
+
+    &:link,
+    &:visited,
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: none !important;
+    }
+  }
+
+  th,
+  td {
+    border-width: solid 1px $c-border;
+
+    &:not(:first-of-type) {
+      border-left-color: $c-border;
+    }
+  }
+}
