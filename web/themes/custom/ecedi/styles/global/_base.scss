@@ -23,4 +23,5 @@ html {
 body {
   font-family: $ff-default;
   font-size: $fs-txt;
+  -webkit-font-smoothing: antialiased; // for Mac : to handle fonts which seem too bold
 }
