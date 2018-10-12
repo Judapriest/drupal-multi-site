@@ -1,0 +1,5 @@
+name: 'ecedi'
+type: module
+description: 'Provide generic tools and helpers to develop faster.'
+core: 8.x
+package: 'Ecedi'
