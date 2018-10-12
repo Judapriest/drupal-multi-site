@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains ecedi.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ecedi_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ecedi module.
+    case 'help.page.ecedi':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provide generic tools and helpers to develop faster.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
