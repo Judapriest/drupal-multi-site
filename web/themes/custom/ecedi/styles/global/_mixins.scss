@@ -94,15 +94,16 @@
 
 
 /// Define bulleted list style (square or round)
-/// @param {string} $color - The bullet's color.
-/// @param {string} $size  - The bullet's size (in px or em or other).
-/// @param {bool} $top   - The bullet's top position (depends also on the line-height).
+/// @param {color} $color - The bullet's color.
+/// @param {number} $size  - The bullet's size (in px or em or other).
+/// @param {number} $top   - The bullet's top position (in px or em or other, depends also on the line-height).
+/// @param {number} $margin   - The space to have on the left of the list (in px or em or other, 1em minimum to have space for the bullet).
 /// @example
-///    @include bulleted-list($c-primary-A, 12px, .75em)
-@mixin bulleted-list($color: currentColor, $size: 6px, $top: .6em) {
+///    @include bulleted-list($c-primary-A, 12px, .75em, 4em)
+@mixin bulleted-list($color: currentColor, $size: 6px, $top: .6em, $margin: 2em) {
   & > li {
     position: relative;
-    margin-left: 2em;
+    margin-left: $margin;
 
     &::before {
       content: '';
@@ -121,15 +122,16 @@
 }
 
 /// Define numbered list style
-/// @param {string} $color - The number's color.
+/// @param {color} $color - The number's color.
+/// @param {number} $margin   - The space to have on the left of the list (in px or em or other, 1em minimum to have space for the number).
 /// @example
-///    @include numbered-list($c-primary-A)
-@mixin numbered-list($color: inherit) {
+///    @include numbered-list($c-primary-A, 4em)
+@mixin numbered-list($color: inherit, $margin: 2em) {
   counter-reset: i;
 
   & > li {
     position: relative;
-    margin-left: 2em;
+    margin-left: $margin;
 
     &::before {
       content: counter(i) '.';
