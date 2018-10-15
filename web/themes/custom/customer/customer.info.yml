@@ -15,3 +15,6 @@ regions:
   header: Header
   content: Content
   footer: Footer
+
+ckeditor_stylesheets:
+  - css/styles.css

@@ -1,0 +1,84 @@
+////
+/// @file
+/// Customer theme wysiwyg.
+////
+
+.text-formatted,
+.cke_editable {
+  p,
+  blockquote,
+  ul,
+  ol,
+  table,
+  iframe {
+    margin-bottom: 1.5em;
+  }
+
+  ul {
+    @include bulleted-list($c-primary-A, 5px, .7em);
+  }
+
+  ol {
+    @include numbered-list($c-primary-A);
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: bold;
+
+    &[target="_blank"] {
+      //@include icon($i-external-link, 1em, after) {
+      //  padding-left: .5rem;
+      //  padding-right: .5rem;
+      //}
+    }
+  }
+
+  figure {
+    clear: both;
+    display: block;
+    margin: 0 auto 2em;
+    text-align: center;
+
+    p,
+    figcaption {
+      margin-top: .75em;
+    }
+  }
+
+  blockquote {
+    padding: 0;
+    margin: 0 0 1.5em;
+
+    p {
+      display: inline;
+    }
+  }
+}
+
+table {
+  clear: both;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  background: $c-white;
+  color: $c-text-A;
+  line-height: normal;
+}
+
+caption {
+  margin-bottom: .25em;
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: .5em;
+  border: 1px solid;
+  text-align: left;
+}
+
+th {
+  background: $c-primary-A;
+  color: $c-white;
+}
