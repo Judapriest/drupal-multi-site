@@ -2,7 +2,7 @@ stages:
   - deploy
 #  - quality
 
-deploy_recette:
+deploy_staging:
   stage: deploy
   script:
     - cd /home/www/[project-path]
@@ -16,12 +16,12 @@ deploy_recette:
     - /usr/local/bin/php71 bin/drupal updb
     - /usr/local/bin/php71 bin/drupal cr
   environment:
-    name: recette
-    url: [url-recette]
+    name: staging
+    url: [url-staging]
   only:
     - devel
   tags:
-    - recette
+    - staging
 
 # deploy_prod:
 #  stage: deploy
