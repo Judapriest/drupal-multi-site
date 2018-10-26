@@ -25,8 +25,8 @@ L'installation se fait sur la machine qui déploie.
 
 ```
 sudo apt-get install ansible
-sudo ansible-galaxy install carlosbuenosvinos.ansistrano-deploy
-sudo ansible-galaxy install carlosbuenosvinos.ansistrano-rollback
+sudo ansible-galaxy install ansistrano.deploy
+sudo ansible-galaxy install ansistrano.rollback
 ```
 # arborescence du site
 

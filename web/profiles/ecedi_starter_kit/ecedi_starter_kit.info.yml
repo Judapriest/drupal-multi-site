@@ -66,14 +66,14 @@ dependencies:
   - metatag_twitter_cards
   - pathauto
   - seo_checklist
-#  - xmlsitemap # This module cause an error during the installation @see ecedi_starter_kit_install().
+  - xmlsitemap
   - redirect
   - google_analytics
   ## Webform
   - webform
   - webform_ui
   ## RGPD
-#  - eu_cookie_compliance # This module cause an error during the installation @see ecedi_starter_kit_install().
+  - eu_cookie_compliance
   ## Others
   - fences
   - menu_block
