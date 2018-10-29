@@ -76,6 +76,7 @@ dependencies:
   ## Others
   - fences
   - menu_block
+  - smart_trim
   ## Multilingual
 #  - language
 #  - locale
