@@ -14,3 +14,9 @@ h5,
 h6 {
   @extend %title;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
