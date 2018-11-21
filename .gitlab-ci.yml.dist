@@ -7,6 +7,7 @@ deploy_staging:
   script:
     - cd /home/www/[project-path]
     - chmod 755 web/sites/default/
+    - /usr/local/bin/php71 bin/drupal site:maintenance on
     - git pull
     - /usr/local/bin/php71 /usr/local/bin/composer install --no-dev
     - cd gulp
@@ -15,6 +16,7 @@ deploy_staging:
     - cd /home/www/[project-path]
     - /usr/local/bin/php71 bin/drupal updb
     - /usr/local/bin/php71 bin/drupal cr
+    - /usr/local/bin/php71 bin/drupal site:maintenance off
   environment:
     name: staging
     url: [url-staging]
