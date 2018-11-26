@@ -71,24 +71,25 @@
     text-align: center;
   }
 
-  @include respond-to('small') {
-    .align-left,
-    .align-right {
+  .align-left,
+  .align-right {
+    @include respond-to('small') {
       float: none;
+    }
+
+    @include respond-to('small up') {
+      max-width: 50%;
     }
   }
 
-  @include respond-to('small up') {
-    .align-left,
-    .align-right {
-      max-width: 50%;
-    }
-
-    .align-left {
+  .align-left {
+    @include respond-to('small up') {
       margin-right: 2em;
     }
+  }
 
-    .align-right {
+  .align-right {
+    @include respond-to('small up') {
       margin-left: 2em;
     }
   }
