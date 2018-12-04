@@ -30,6 +30,10 @@ Initial README file from [drupal-composer/drupal-project](https://github.com/dru
     6. Synchronize files from the folder chewbacca "files" to its instance : `rsync -avz -e ssh ecedi@recette53:/home/www/<chewbacca url>/web/sites/default/files/ ./web/sites/default/files/`
         *`<site_name>`: ex. mtes-cigeo.71.ecedi.fr
         If you don't have permission to crate the file do this before : `chmod u+w web/sites/default`
+    7. Initiate the theme styles via Gulp
+        * `cd gulp`
+        * `npm install` to install all the modules/dependencies
+        * `gulp` to compile the necessary files (CSS for Ecedi & Customer themes)
 
 ## Installation prod vs dev
 
