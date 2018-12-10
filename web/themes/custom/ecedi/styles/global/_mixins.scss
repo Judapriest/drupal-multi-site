@@ -110,8 +110,6 @@
     position: relative;
     display: flex;
 
-    border: 1px dashed #8cb8ff;
-
     &::before {
       width: $size;
       height: $size;
