@@ -81,6 +81,8 @@ dependencies:
   - smart_trim
   - entity_list
   - block_class
+  - components
+  - components_extras
   ## Multilingual
 #  - language
 #  - locale
