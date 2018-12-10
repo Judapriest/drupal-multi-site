@@ -136,7 +136,7 @@
 /// @param {number} $margin - The space to have between the number and the text.
 /// @example
 ///    @include numbered-list($c-primary-A, 1em)
-@mixin numbered-list-lal($color: inherit, $margin: .3em) {
+@mixin numbered-list($color: inherit, $margin: .3em) {
   counter-reset: i;
 
   & > * {
