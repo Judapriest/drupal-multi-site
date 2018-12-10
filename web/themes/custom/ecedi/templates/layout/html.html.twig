@@ -40,6 +40,14 @@
     <js-placeholder token="{{ placeholder_token }}">
   </head>
   <body{{ attributes.addClass(body_classes) }}>
+    {#
+      Keyboard navigation/accessibility links to main sections in
+      page.html.twig.
+    #}
+    <a class="skip-links" href="#block-mainnavigation">{{ 'Skip to Menu'|t }}</a>
+    <a class="skip-links" href="#search-block-form"> {{ 'Skip to Search'|t }}</a>
+    <a class="skip-links" href="#main-content">{{ 'Skip to Main content'|t }}</a>
+    <a class="skip-links" href="#footer">{{ 'Skip to Footer'|t }}</a>
 
     {{ page_top }}
     {{ page }}

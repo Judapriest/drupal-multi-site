@@ -3,39 +3,19 @@
 /// Customer skip-link
 ////
 
-.skip-link {
-  //@extend %hidden; en attente de validation MR https://gitlab.ecedi.fr/drupal/d8-dev-sk/merge_requests/58/
+.skip-links {
+  position: fixed;
+  top: -200px;
   z-index: 1;
   font-size: 1.2rem;
+  display: inline-block;
+  padding: .5em;
+  background: $c-primary-A;
+  color: $c-white;
+  text-decoration: underline;
 
-  &.is-visible {
-    left: 0;
-  }
-
-  p {
-    display: inline-block;
-    padding: .5em 0 .5em .5em;
-  }
-
-  ul {
-    display: inline-block;
-  }
-
-  li {
-    display: inline-block;
-
-    &:not(:first-of-type) {
-      &::before {
-        content: "|";
-        display: inline-block;
-      }
-    }
-
-    a {
-      display: inline-block;
-      padding: .5em;
-      color: inherit;
-      text-decoration: underline;
-    }
+  &:focus,
+  &:active {
+    top: 0;
   }
 }
