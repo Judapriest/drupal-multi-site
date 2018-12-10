@@ -24,21 +24,18 @@
   li {
     display: inline-block;
 
-    &::before {
-      content: "|";
-      display: inline-block;
+    &:not(:first-of-type) {
+      &::before {
+        content: "|";
+        display: inline-block;
+      }
     }
 
     a {
+      display: inline-block;
       padding: .5em;
       color: inherit;
       text-decoration: underline;
-    }
-
-    &:first-child {
-      &::before {
-        display: none;
-      }
     }
   }
 }
