@@ -14,6 +14,18 @@
     margin-bottom: 1.5em;
   }
 
+  p,
+  blockquote,
+  ul,
+  ol {
+    overflow: hidden; // clearfix for floating images
+  }
+
+  table,
+  iframe {
+    clear: both; // pass under floating images
+  }
+
   ul {
     @include bulleted-list($c-primary-A, 5px, .7em);
   }
@@ -38,10 +50,10 @@
     clear: both;
     display: block;
     margin: 0 auto 2em;
-    text-align: center;
 
     p,
     figcaption {
+      display: block;
       margin-top: .75em;
     }
   }
@@ -52,6 +64,33 @@
 
     p {
       display: inline;
+    }
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .align-left,
+  .align-right {
+    @include respond-to('small') {
+      float: none;
+    }
+
+    @include respond-to('small up') {
+      max-width: 50%;
+    }
+  }
+
+  .align-left {
+    @include respond-to('small up') {
+      margin-right: 2em;
+    }
+  }
+
+  .align-right {
+    @include respond-to('small up') {
+      margin-left: 2em;
     }
   }
 }
