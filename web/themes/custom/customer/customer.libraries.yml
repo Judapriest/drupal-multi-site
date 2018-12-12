@@ -11,6 +11,7 @@ global-styling:
     theme:
       css/styles.css: {}
 #  js:
+#    js/demo.js: {}
 #  dependencies:
 #    - core/jquery
 #    - core/jquery.once
