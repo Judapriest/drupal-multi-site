@@ -16,5 +16,10 @@ regions:
   content: Content
   footer: Footer
 
+component-libraries:
+  customer:
+    paths:
+      - components
+
 ckeditor_stylesheets:
   - css/styles.css
