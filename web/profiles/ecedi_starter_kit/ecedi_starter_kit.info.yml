@@ -80,6 +80,7 @@ dependencies:
   - menu_block
   - smart_trim
   - entity_list
+  - block_class
   ## Multilingual
 #  - language
 #  - locale
