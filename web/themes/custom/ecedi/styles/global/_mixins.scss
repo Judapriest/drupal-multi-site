@@ -34,8 +34,8 @@
 
 /// Display icon using the before|after pseudo element.
 /// @param {string} $icon - The icon content code (eg. from icomoon).
-/// @param {length | percentage} $size - The icon size in rem|em|px|etc...
-/// @param {string} $pseudoElement - The pseudo element to apply the icon to (before|after).
+/// @param {number} $size - The icon size [in rem|em|px|%].
+/// @param {string} $pseudoElement - The pseudo element to apply the icon to [before|after].
 /// @example
 ///    .submit-button {
 ///      @include icon($i-submit);
@@ -53,15 +53,14 @@
     font-size: $size;
     @content;
   }
-
 }
 
 /// @font-face definitions.
-/// @param {string} $name - The font-family name.
-/// @param {url} $path - The files path (without the extension).
-/// @param {string} $weight - The associated font-weight (normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900).
-/// @param {string} $style - The associated font-style (normal | italic | oblique).
-/// @param {list} $exts - The associated extensions.
+/// @param {string} $name   - The font-family name.
+/// @param {url}    $path   - The files path (without the extension).
+/// @param {string} $weight - The associated font-weight [normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900].
+/// @param {string} $style  - The associated font-style [normal | italic | oblique].
+/// @param {list}   $exts   - The associated extensions.
 /// @example
 ///    @include font-face(MyFont, "../font/my-font", bold, italic, eot woff ttf svg);
 @mixin font-face($name, $path, $weight: normal, $style: normal, $exts: eot woff2 woff ttf svg) {
@@ -94,32 +93,26 @@
 
 
 /// Define bulleted list style (square or round)
-/// @param {color}   $color - The bullet's color.
-/// @param {number}  $size  - The bullet's size (width and height) in rem|em|px|etc...
-/// @param {boolean} $round - The bullet's shape (round if true, square if not).
-/// @param {number}  $line-height - To calculate the top position.
+/// @param {color}   $color  - The bullet's color.
+/// @param {number}  $size   - The bullet's size (width and height) [in rem|em|px|%].
+/// @param {number}  $margin - The space to have on the right of the bullet [in rem|em|px|%].
+/// @param {boolean} $round  - The bullet's shape (round if true, square if not).
 /// @example
-///    @include bulleted-list($c-primary-A, 12px, false, 1)
-@mixin bulleted-list($color: currentColor, $size: 6px, $round: true, $line-height: 1.6) {
-
-  // To adjust the top position on the center of the first line
-  $top: ($line-height / 2);
-  $translate: (($size / 2) * -1);
+///    @include bulleted-list($c-primary-A, 12px, 1em, 10px, false);
+@mixin bulleted-list($color: currentColor, $size: 6px, $top: .8em, $margin: .3em, $round: true) {
 
   & > * {
     position: relative;
     display: flex;
 
     &::before {
-      width: $size;
-      height: $size;
-      display: block;
-      flex-shrink: 0;
-      margin-right: .3em;
       content: '';
       position: relative;
-      top: #{$top}em;
-      transform: translateY($translate);
+      width: $size;
+      height: $size;
+      top: $top;
+      transform: translateY(-50%);
+      margin-right: $margin;
       background: $color;
 
       @if $round {
@@ -133,24 +126,23 @@
 
 /// Define numbered list style
 /// @param {color}  $color  - The number's color.
-/// @param {number} $margin - The space to have between the number and the text.
+/// @param {number} $margin - The space to have between the number and the text [in rem|em|px|%].
+/// @param {string} $align  - The number's alignment (related to its width).
+/// @param {number} $width  - The width available for the number [in rem|em|px|%].
 /// @example
-///    @include numbered-list($c-primary-A, 1em)
-@mixin numbered-list($color: inherit, $margin: .3em) {
+///    @include numbered-list($c-primary-A, 1em, center, 30px)
+@mixin numbered-list($color: inherit, $margin: .3em, $align: right, $width: 1.25em) {
   counter-reset: i;
 
   & > * {
-    position: relative;
     display: flex;
 
     &::before {
-      width: 1.25em;
-      display: block;
-      flex-shrink: 0;
-      margin-right: $margin;
-      text-align: center;
       content: counter(i) '.';
       counter-increment: i;
+      width: $width;
+      margin-right: $margin;
+      text-align: $align;
       color: $color;
       @content;
     }
