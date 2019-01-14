@@ -9,6 +9,5 @@ libraries:
   - ecedi/js-helpers
 libraries-override:
   classy/base: false
-  classy/file: false
 
 base theme: classy
