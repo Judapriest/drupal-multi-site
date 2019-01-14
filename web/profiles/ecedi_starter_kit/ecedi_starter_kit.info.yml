@@ -82,6 +82,7 @@ dependencies:
   - entity_list
   - components
   - components_extras
+  - block_class
   ## Multilingual
 #  - language
 #  - locale
