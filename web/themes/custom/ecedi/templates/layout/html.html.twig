@@ -44,31 +44,13 @@
       Keyboard navigation/accessibility links to main sections in
       page.html.twig.
     #}
-    <div id="skip-link">
-      <p>{{ 'Skip to'|t }}</p>
-      <ul>
-        <li>
-          <a href="#block-mainnavigation">
-            {{ 'Menu'|t }}
-          </a>
-        </li>
-        <li>
-          <a href="#search-block-form">
-            {{ 'Search'|t }}
-          </a>
-        </li>
-        <li>
-          <a href="#main-content">
-            {{ 'Main content'|t }}
-          </a>
-        </li>
-        <li>
-          <a href="#footer">
-            {{ 'Footer'|t }}
-          </a>
-        </li>
-      </ul>
-    </div>
+    <ul class="skip-link">
+      <li><a href="#block-mainnavigation">{{ 'Skip to Menu'|t }}</a></li>
+      <li><a href="#search-block-form"> {{ 'Skip to Search'|t }}</a></li>
+      <li><a href="#main-content">{{ 'Skip to Main content'|t }}</a></li>
+      <li><a href="#footer">{{ 'Skip to Footer'|t }}</a></li>
+    </ul>
+
 
     {{ page_top }}
     {{ page }}
