@@ -80,6 +80,8 @@ dependencies:
   - menu_block
   - smart_trim
   - entity_list
+  - components
+  - components_extras
   - block_class
   ## Multilingual
 #  - language
